@@ -1,0 +1,1 @@
+A logarithmic function takes the form $f(n) = a \log_{2} n$. $f(n)$ increases very slowly in relation to $n$. The [[Big-O Notation]] for a logarithmic function is written $O(\log n)$. Since we're only concerned with base 2 it is not necessary to specify it in the notation. An example of a logarithmic function is [[Divide and Conquer]].

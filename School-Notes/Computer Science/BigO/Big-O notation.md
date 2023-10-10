@@ -1,0 +1,3 @@
+Big-O Notation is a measure of the time complexity of an algorithm. It is a useful approximation of the time taken to execute an algorithm for a given number of items ($n$) in a data set.
+
+An algorithm of time complexity $O(n)$ increases linearly. 10,000 items will take approximately twice as long as 5,000 items to process. There is no such thing as $O(2n + 1)$ as all constants are dropped resulting in $O(n)$.

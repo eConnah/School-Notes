@@ -1,0 +1,1 @@
+The high level code will most likely run slower than assembly code or machine code it can also occupy more space in RAM which can be a problem in embedded systems with a small amount of memory. Most high level languages do not have statements to allow the programmer to manipulate inividual bits essential in some applications such as drivers.

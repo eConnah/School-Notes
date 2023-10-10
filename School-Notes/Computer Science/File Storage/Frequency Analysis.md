@@ -1,0 +1,1 @@
+Letters are not used equally as often. In english E is by far the most common letter followed by T, A, O, I, N, S, R and then H. Other letters like Z, J, K, Q, X are fairly rare. A method of decoding uses the most common letters in a coded message and substitutes them for the most common letters in the english language.

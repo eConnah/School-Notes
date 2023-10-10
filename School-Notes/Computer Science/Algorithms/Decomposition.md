@@ -1,0 +1,1 @@
+Procedural decomposition means breaking a problem into a number of sub-problems, so that each sub-problem accomplishes an identifiable task. The sub-problems may themselves be further subdivided. Composition is the opposite.

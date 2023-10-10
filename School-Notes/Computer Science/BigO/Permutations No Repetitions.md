@@ -1,0 +1,1 @@
+An algorithm for permutations with no repetitions has a BigO notation of $O(n!)$. 

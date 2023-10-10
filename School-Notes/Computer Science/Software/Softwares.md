@@ -1,0 +1,1 @@
+Software comprises all of the programs that make the computer function. Like the music on a CD, it doesn't have a physical presence. Software programs fit into one of two categories: system software and application software.

@@ -1,0 +1,6 @@
+[[Assembly]]
+[[Colossus]]
+[[High Level Languages]]
+[[High Level vs Low Level]]
+[[Machine Code]]
+[[Translation]]

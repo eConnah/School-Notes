@@ -1,0 +1,6 @@
+Interference happens when two or more waves meet. Waves can interact with each other through superposition, which means their displacements are added together. Whether this interference is constructive or destructive depends on the phase relationship between the waves. If the waves are in phase, where the crests and troughs line up, they will constructively interfere leading to a wave with increased amplitude. However, if they are out of phase, the crests of one wave will cancel out the troughs of the other and vice versa, leading to destructive interference.
+
+Stationary waves, or stationary waves, are formed when two waves of the same frequency and amplitude travel in opposite directions and superpose, this results in points of constructive interference as well as points of destructive interference as seen below.
+![[StandingWave.gif]]
+
+At certain distances between the fixed ends, called harmonic distances, the reflected and incident waves will constructively interfere leading to antinodes or points of maximum displacement. At other distances, the waves destructively interfere forming nodes or points of no displacement. The lowest frequency standing wave that fits in the fixed distance is called the fundamental frequency, higher frequency waves will result in more nodes and antinodes.

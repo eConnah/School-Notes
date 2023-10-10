@@ -1,0 +1,5 @@
+Path difference plays a crucial role in understanding wave interference, the phenomenon where two or more waves interact and combine. It refers to the difference in the distances traveled by two waves from their respective sources to a specific point. This difference significantly impacts how the waves interact at that point.
+
+When two waves have a path difference equal to an integer multiple of the wavelength $(\lambda)$, they are said to be in phase. In this scenario, the crests and troughs of the waves overlap, leading to constructive interference. This results in a larger amplitude at the point of observation compared to the individual waves.
+
+Conversely, when the path difference is an odd multiple of half the wavelength $(\frac{\lambda}{2})$, the waves are out of phase. This means the crests of one wave coincide with the troughs of the other, leading to destructive interference. This results in a cancellation effect, causing the waves to weaken or disappear entirely at that point.

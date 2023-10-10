@@ -1,0 +1,7 @@
+[[Busses]]
+[[Internal Hardware Components]]
+[[IO Controller]]
+[[Input Output]]
+[[Main Memory]]
+[[Multipurpose Machines]]
+[[Processor]]

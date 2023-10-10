@@ -1,0 +1,1 @@
+The true complexities of operations are hidden from the end user via an Application Programming Interface (API). Users can issue commands or simply click a mouse to perform complex operations without having to know how they are carried out.

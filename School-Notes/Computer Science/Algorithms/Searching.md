@@ -1,0 +1,1 @@
+Two of the most common searching algorithms are the linear search and the binary search. The linear search starts at the beginning of the list and examines every item. The binary search uses the [[Divide and Conquer]] strategy to halve the search area each time an item is examined.

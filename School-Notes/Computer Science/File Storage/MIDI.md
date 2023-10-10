@@ -1,0 +1,1 @@
+With this system the full sound signal does not need to be transmitted, only the instructions to play the sound. It is up to the instrument to create the sound, this significantly reduces the amount of data transferred although since the sounds are synthesised they may sound less realistic.

@@ -1,0 +1,1 @@
+This involves finding a solution to a sequence of smaller related problems until the instance is small enough to solve directly.

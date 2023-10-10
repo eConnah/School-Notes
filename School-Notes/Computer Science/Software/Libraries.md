@@ -1,0 +1,1 @@
+A library is a collection of pre-compiled routines that can be used by other programs. Programmers can invoke library subroutines to save having to re-write code. Python has math, random and turtle libraries for example. Similar libraries exist in most programming languages.

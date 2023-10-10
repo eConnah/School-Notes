@@ -1,0 +1,1 @@
+Machine code is the lowest level of instruction comprising pure binary, all computer instructions need to be converted into machine code. A [[Translation|translator]] is used to translate code written in assembly language or other high level code into machine-code. They are not considered utility programs and are instead their own category.

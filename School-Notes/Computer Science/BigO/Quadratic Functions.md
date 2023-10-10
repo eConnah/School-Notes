@@ -1,0 +1,1 @@
+A quadratic function takes the form $f(n) = an^{2} +bn + c$ where $a$, $b$ and $c$ are constants. As $n$ becomes large, the $n^{2}$ term increases much faster than either of the other terms. The [[Big-O Notation]] for a quadratic function is written $O(n^{2})$. The dominant term is the one used when comparing algorithms, so the $bn$ and $c$ terms are not considered.

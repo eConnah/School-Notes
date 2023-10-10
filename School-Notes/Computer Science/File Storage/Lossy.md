@@ -1,0 +1,1 @@
+Non-essential data is permanently removed, for example, different shades of the same colour in an image or frequencies of sound outside the range of human hearing.

@@ -1,0 +1,10 @@
+# Assemblers
+All programs have to be translated into machine code before they can be run, [[Assembly]] language is translated into machine code by a program called an assembler. Typically one [[Assembly]] code instruction is translated into one machine code instruction but these instructions can be different for each type of processor architechture. [[Assembly]] code is used when a program needs to run as fast as possible and occupy as little space in ram and storage such as on embedded systems, like wachine machines, microwaves etc.
+
+# Compilers
+A compiler is a program that translates [[High Level Languages]] such as VisualBasic into object code. Different hardware platforms need different compilers to translate the source code into the machine code that the computer understands. It's a complex program which has serveral phases such as lexical analysis, syntactic analysis and semantic analysis, going through the whole program at each stage. It produces some intermediate level code before going directly to machine code to attempt to optimise it. If there are errors then the code will fail to generate. When all errors have been corrected the compiler will produce relocatable code that can then be loaded by the CPU without the compiler present.
+
+An example of intermediate code is Bytecode, this is the language the java compiler uses. The file in Bytecode is portable because each computer that can run java has a JVM (Java Virtual Machine) that understands bytecode and converts it into the machine code required for that particular computer.
+
+# Interpreters
+An interpreter translates [[High Level Languages]] into an intermediate form which it then executes. No [[Machine Code]] is produced during this, this is useful in education as well as development since someone may want to test a small piece of code without reompiling the whole program. Most [[High Level Languages]] use both interpreters and compilers.

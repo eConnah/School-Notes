@@ -1,0 +1,11 @@
+Electromagnetic waves are [[Transverse]] waves that are part of the electromagnetic (light) spectrum.
+
+| Wave Type              | Wavelength                 | Frequency                                   | Uses                                                             | Hazards                                                                        |
+| ---------------------- | -------------------------- | ------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Radio waves            | Longest wavelength         | Lowest frequency                            | Radio and television broadcasting, radar, wireless communication | Minimal                                                                        |
+| Microwaves             | Shorter than radio waves   | Higher than radio waves                     | Cooking, medical imaging, satellite communication                | Overheating of tissues if exposure is too high                                 |
+| Infrared waves         | Shorter than microwaves    | Higher than microwaves                      | Remote controls, night vision, heat detection                    | Can cause skin burns if exposure is too high                                   |
+| Visible light          | Visible to the human eye   | Highest frequency of non-ionising radiation | Vision, photosynthesis                                           | Can cause cataracts and retinal damage from prolonged exposure to bright light |
+| Ultraviolet (UV) waves | Shorter than visible light | Higher than visible light                   | Vitamin D production, germicidal sterilisation                   | Causes sunburn, skin cancer, and cataracts                                     |
+| X-rays                 | Shorter than UV waves      | Higher than UV waves                        | Medical imaging, industrial radiography                          | Can damage cells and DNA, causing cancer                                       |
+| Gamma rays             | Shortest wavelength        | Highest frequency                           | Medical imaging, sterilisation of medical equipment              | Extremely hazardous, can cause cancer and genetic mutations                    |

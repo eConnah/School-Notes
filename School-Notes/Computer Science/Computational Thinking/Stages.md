@@ -1,0 +1,5 @@
+- Analysis
+- Design
+- Implementation
+- Testing
+- Evaluation

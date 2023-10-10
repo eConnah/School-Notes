@@ -1,0 +1,1 @@
+It has mass, it may carry charge or other characteristics and it obeys newtons laws of motions.

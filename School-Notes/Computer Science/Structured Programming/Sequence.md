@@ -1,0 +1,1 @@
+A sequence consists of one or more statements following one after the other. Essentially multiple lines of code running in sequence.

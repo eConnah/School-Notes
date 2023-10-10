@@ -1,0 +1,1 @@
+Patterns in the data are spotted and summarised in a shorter format without permanently removing any information.

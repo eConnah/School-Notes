@@ -1,0 +1,1 @@
+Main memory stores data and instructions that are to be processed, the number of memory addresses is constrained by the width of the address bus. Each address can store a fixed number of bits determined by the type of processor The smallest addressable unit is called a word.

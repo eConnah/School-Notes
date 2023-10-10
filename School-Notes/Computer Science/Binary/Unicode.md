@@ -1,0 +1,1 @@
+Unicode is a character encoding standard that aims to represent all characters from all writing systems in the world. It uses variable-length encoding, with each character represented by a unique code point. Unicode supports over 137,000 characters, including [[ASCII]] characters.

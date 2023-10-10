@@ -1,0 +1,1 @@
+An algorithm for permutations with repetitions has a [[Big-O Notation]] of $O(2^{n})$. 

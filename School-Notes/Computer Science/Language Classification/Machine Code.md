@@ -1,0 +1,1 @@
+In machine code, a typical instruction holds an operation code (opcode) in the first few bits and an operand in the rest of the bits. Nowadays computers typically use 16, 24, 32 or 64 bits for a machine code instruction.
