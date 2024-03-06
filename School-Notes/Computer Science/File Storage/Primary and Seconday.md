@@ -1,4 +1,4 @@
-Primary storage is volatile and usually refers to RAM while secondary storage refers to non-volatile storage. Seconday storage consists of:
+Primary storage is volatile and usually refers to RAM while secondary storage refers to non-volatile storage. Secondary storage consists of:
 - Magnetic storage like the hard disk.
 - Optical storage that uses laser light such as CD-ROM.
 - Solid state devices using Flash memory.

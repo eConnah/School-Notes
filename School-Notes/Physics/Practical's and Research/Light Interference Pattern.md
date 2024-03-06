@@ -44,10 +44,11 @@ Control variables: Wavelength of laser light $(\lambda)$, slit separation $(d)$,
 
 ## Results Table
 
-| n      | $h_{1} (m)$ | $h_{2} (m)$ | $h_{3} (m)$ | $h_{m} (m)$ | $\theta (\degree)$ |
-| ------ | ----------- | ----------- | ----------- | ----------- | ------------------ |
-| 0 to 1 |             |             |             |             |                    |
-| 1 to 2 |             |             |             |             |                    |
+| n   | $h_{1} (m)$ | $h_{2} (m)$ | $h_{3} (m)$ | $h_{m} (m)$ | $\theta (\degree)$ |
+| --- | ----------- | ----------- | ----------- | ----------- | ------------------ |
+| 1   |             |             |             |             |                    |
+| 2   |             |             |             |             |                    |
+| 3   |             |             |             |             |                    |
 
 
 # Graph
@@ -58,4 +59,5 @@ Method and Equations 06-03-24:
 - Save My Exams. (n.d.). _Core Practical 6: Investigating Diffraction Gratings (2.20) | Edexcel International A Level Physics Revision Notes 2019_. [online] Available at: https://www.savemyexams.com/international-a-level/physics/edexcel/19/revision-notes/2-waves--electricity/waves-electrons--photons/2-20-core-practical-6-investigating-diffraction-gratings/.
 
 ‌
-‌
+‌Understanding and Calculations 06-03-24:
+- Physics Online (2016). _Measuring Wavelength of Light with a Diffraction Grating - PRACTICAL - A Level Physics_. _YouTube_. Available at: https://www.youtube.com/watch?v=TlkVtpzPTdU.
