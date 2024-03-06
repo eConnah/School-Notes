@@ -2,6 +2,7 @@
 [[Electromagnetic Waves]]
 [[Interference]]
 [[Longitudinal]]
+[[Path Difference]]
 [[Reflection]]
 [[Refraction]]
 [[Signal Degradation]]

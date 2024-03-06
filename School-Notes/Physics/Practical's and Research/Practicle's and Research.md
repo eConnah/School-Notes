@@ -1,5 +1,6 @@
 [[Calculating Resistivity]]
 [[Detecting Particles]]
+[[Double-Slit Interference]]
 [[Gravity in Freefall]]
 [[Plotting IV Graphs]]
 [[Stationary Wave Practical]]
