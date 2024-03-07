@@ -2,6 +2,6 @@
 [[Detecting Particles]]
 [[Gravity in Freefall]]
 [[Internal Resistance]]
-[[Light Interference Pattern]]
 [[Plotting IV Graphs]]
 [[Stationary Wave Practical]]
+[[Young's Double Slit]]
