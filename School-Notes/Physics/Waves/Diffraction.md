@@ -13,6 +13,7 @@ Where $\theta$ is the angle from the centreline and $\lambda$ is the wavelength.
 When using a narrow slit known as an aperture, the extent of diffraction will depend on the width of the gap compared with the wavelength of the waves. Diffraction is the most prominent when the width of the slit is approximately equal to the wavelength. The features of the single slit diffraction pattern are:
 - A central maximum with a high intensity
 - Subsidiary maxima equally spaced, successively smaller in intensity and half the width of the central maximum
+
 If the laser were to be replaced by a non-laser source emitting white light:
 - The central maximum would be white
 - All maxima would be composed of a spectrum
@@ -21,3 +22,17 @@ If the laser were to be replaced by a non-laser source emitting white light:
 - The fringe spacing would be smaller and the maxima would be wider
 ![[WhiteLightDiffraction.avif]]
 ![[DoubleSlit.png]]
+
+## Diffraction Gratings
+Diffraction gratings consist of a large number of closely spaced parallel slits or grooves, which act as sources of diffraction and interference patterns. When monochromatic light hits the diffraction grating, it produces a series of bright and dark fringes, known as the diffraction pattern.
+
+The diffraction pattern produced by a grating is governed by the grating equation:
+$$n \lambda = d \sin \theta$$
+Where:
+- n is the order of maxima.
+- $\lambda$ is the wavelength of light.
+- d is the distance between slits.
+- $\theta$ is the angle to the zero order
+
+The diffraction pattern consists of a central bright fringe and several higher-order bright fringes on either side. The intensity of these fringes decreases with increasing order, and their angular separation depends on the wavelength of the incident light and the grating spacing.
+![[DiffractionGrating.png]]
