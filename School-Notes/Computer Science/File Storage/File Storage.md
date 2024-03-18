@@ -4,5 +4,6 @@
 [[Lossless]]
 [[Lossy]]
 [[MIDI]]
+[[Primary and Secondary]]
 [[RLE]]
 [[Vernam Cipher]]
