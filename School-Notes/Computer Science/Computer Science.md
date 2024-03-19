@@ -6,6 +6,8 @@
 
 ![[Computational Thinking]]
 
+![[Data Structures]]
+
 ![[File Storage]]
 
 ![[Hardware]]
