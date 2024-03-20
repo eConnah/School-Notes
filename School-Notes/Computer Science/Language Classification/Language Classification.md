@@ -1,5 +1,6 @@
 [[Assembly]]
 [[Colossus]]
+[[Functional Paradigm]]
 [[High Level Languages]]
 [[High Level vs Low Level]]
 [[Machine Code]]

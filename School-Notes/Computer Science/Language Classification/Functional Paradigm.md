@@ -1,0 +1,2 @@
+A functional program describes a series of functions, each function takes in some data as arguments and returns an output. Functional programming has a lot in common with mathematics. Some programming languages support multiple
+paradigms. Python, VB and Delphi may be used to write a procedural or an object-oriented program. Other languages may only support a single paradigm such as SQL and Haskell.
