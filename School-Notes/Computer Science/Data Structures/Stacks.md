@@ -9,3 +9,10 @@ These methods could be written to implement the required functionality of a stac
 - isEmpty() — checks if the stack is empty
 - peek() — return the top item without removing it
 - size() — return the number of items on the stack
+
+# The Call Stack
+When a function is called, the processor pushes information about the function onto the call stack. This information includes the memory address of the function, the values of any variables defined within the function, and the return address, which is the memory address of the instruction following the function call.
+
+When the function returns, the processor pops the information off the call stack and jumps to the return address. This allows the program to continue executing correctly after the function call.
+
+The call stack is a LIFO (Last-In-First-Out) data structure, which means that the last function called is at the top of the stack and the first function called is at the bottom. When a function is called, it is pushed onto the top of the stack, and when it returns, it is popped off the top of the stack.The call stack is an important part of a computer program's execution because it ensures that functions are called and returned in the correct order. If there is an error in a function call, such as a missing closing parenthesis or bracket, the call stack can help identify the location of the error.
