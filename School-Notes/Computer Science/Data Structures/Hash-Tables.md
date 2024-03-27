@@ -3,3 +3,14 @@ If a list of items is in random order, the only option is a sequential search. I
 A hash table which will find any record in the dataset almost instantly, no matter how large the dataset. The address of the data item to be stored is calculated from the data itself, using a hashing algorithm. Large data sets can be organised so each record is assigned a unique address, this unique address is calculated using a hashing algorithm or hash function. The algorithm uses some part of the record (e.g. the primary key) to map the record to a unique destination address, the resulting data structure used to store the data is called a hash table.
 
 A collision happens when an algorithm generates the same address for different primary keys, a collision is sometimes referred to as a synonym. However good the hashing algorithm is, it is impossible to avoid collisions. The simplest method is to put the item in the next free slot in the table, a disadvantage is that this tends to lead to "clustering" of items in the table. An alternative algorithm is to increment the 'skip' value by adding 1 5, 7 etc. instead of repeatedly incrementing by 1 to find a free space when doing this the size of the skip value must be such that all slots in the table will eventually be reached, or part of the table will be left unused. As the table fills up (i.e. as the load factor increases), more and more collisions occur, the table size needs to be large enough so that the load factor is not more than about 50% - 70% of table size. With a skip factor greater than 1, it may not be possible to store an item even if the table is not full, because not all addresses can be generated, this problem can be avoided by using a prime number as the table size.
+
+# Dictionary
+A dictionary is an abstract data type made up of associated pairs, each pair has a key and a value. The value is accessed via the key. A dictionary is a very useful data structure for any application where items need to be looked up. For example in a computer system, the ASCII or Unicode table; In a translation program, a foreign language dictionary containing words and meanings; Other data structures such as trees and graphs may be implemented using a dictionary. 
+
+Multiple items with the same key are not allowed, but the value associated with a key could be a list, dictionary or other data structure which can store multiple values. The methods to implement a dictionary are:
+- Add a new key:value pair to the dictionary
+- Delete a key:value pair from the dictionary
+- Amend the value in akey: value pair
+- Return the value associated with key
+- Return True or False depending on whether the key is in the dictionary
+- Return the length of the dictionary

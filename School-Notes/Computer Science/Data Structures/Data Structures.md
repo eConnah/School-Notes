@@ -1,3 +1,5 @@
+[[Graphs]]
+[[Hash-Tables]]
 [[Queues]]
 [[Stacks]]
 [[Structure Types]]
