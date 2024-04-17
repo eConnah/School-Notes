@@ -3,3 +3,4 @@
 [[Queues]]
 [[Stacks]]
 [[Structure Types]]
+[[Trees]]
