@@ -1,4 +1,4 @@
-Uses of vectors:
+# Uses
 - Graphics and 3D graphics - Images are defined as paths, not distinct bit patterns, rules of mathematics allow scaling without distortion.
 - Computer games / simulations - The combination of moving forces, represented by vectors, can be resolved into a single path by using the same mathematical rules. For example, a ship steering against the wind and sea, calculating collision paths.
 - Multiple dimensions - Can represent 2, 3, or more dimensions.
@@ -15,4 +15,4 @@ $$u \cdot v = u_{1}v_{1} + u_{2}v_{2} + u_{3}v_{3} + \ldots u_{n}v_{n}$$
 ## Angle
 The length of the vectors can be written in mathatical notation as $\Vert u \Vert$ and $\Vert v \Vert$.
 The angle can be calculated by:
-$$\cos{\theta} = \frac{u \cdot v}{\Vert u \Vert \cdot \Vert v \Vert}$$
+$$\cos(\theta) = \frac{u \cdot v}{\Vert u \Vert \cdot \Vert v \Vert}$$
