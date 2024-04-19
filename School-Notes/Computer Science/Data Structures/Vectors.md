@@ -13,6 +13,6 @@ A method for multiplying 2 vectors together written by a dot $(u \cdot v)$. The 
 $$u \cdot v = u_{1}v_{1} + u_{2}v_{2} + u_{3}v_{3} + \ldots u_{n}v_{n}$$
 
 ## Angle
-The length of the vectors can be written in mathatical notation as $\|u\|$ and $\|v\|$.
+The length of the vectors can be written in mathatical notation as $\Vert u \Vert$ and $\Vert v \Vert$.
 The angle can be calculated by:
-$$\cos{\theta} = \frac{u \cdot v}{\|u\| \cdot \|v\|}$$
+$$\cos{\theta} = \frac{u \cdot v}{\Vert u \Vert \cdot \Vert v \Vert}$$
