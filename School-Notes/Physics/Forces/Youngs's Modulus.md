@@ -6,8 +6,8 @@ The formula for Young's modulus is expressed as:
 $$E = \frac{\sigma}{\varepsilon}$$
 
 Where:
-- Stress $(\sigma)$ is the applied force per unit area, measured in pascals (Pa) or newtons per square meter $Nm^{-2}$.
-- Strain $(\varepsilon)$ is the fractional change in length or dimension, which is unit-less.
+- [[Tensile Stress]] $(\sigma)$ is the applied force per unit area, measured in pascals (Pa) or newtons per square meter $Nm^{-2}$.
+- [[Tensile Strain]] $(\varepsilon)$ is the fractional change in length or dimension, which is unit-less.
 
 Other formulas include:
 $$E=\frac{F_{t} L}{A \Delta L}$$
