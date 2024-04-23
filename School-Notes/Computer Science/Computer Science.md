@@ -8,6 +8,8 @@
 
 ![[Data Structures]]
 
+![[Databases]]
+
 ![[File Storage]]
 
 ![[Hardware]]
