@@ -5,3 +5,4 @@
 [[Plotting IV Graphs]]
 [[Stationary Wave Practical]]
 [[Young's Double Slit]]
+[[Young's Modulus Practical]]
