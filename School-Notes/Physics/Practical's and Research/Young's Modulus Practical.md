@@ -48,17 +48,25 @@ Where:
 
 ## Results Table
 
-| Mass $(kg)$ | New Length $(m)$ | Extension $(m)$ |
-| ----------- | ---------------- | --------------- |
-| 0.1         |                  |                 |
-| 0.2         |                  |                 |
-| 0.3         |                  |                 |
-| 0.4         |                  |                 |
-| 0.5         |                  |                 |
-| 0.6         |                  |                 |
+| Mass $(kg)$ | Wire Length $(m)$ | Extension $(mm)$ | Stress $(\sigma)$     | Strain $(\varepsilon)$ |
+| ----------- | ----------------- | ---------------- | --------------------- | ---------------------- |
+| 0.0         | 1.6000            | 0                | 0                     | 0                      |
+| 0.1         | 1.6006            | 0.6              | $1.219 \times 10^{7}$ | $3.750 \times 10^{-3}$ |
+| 0.2         | 1.6012            | 1.2              | $2.439 \times 10^{7}$ | $7.500 \times 10^{-3}$ |
+| 0.3         | 1.6018            | 1.8              | $3.658 \times 10^{7}$ | $1.125 \times 10^{-3}$ |
+| 0.4         | 1.6024            | 2.4              | $4.877 \times 10^{7}$ | $1.500 \times 10^{-3}$ |
+| 0.5         | 1.6030            | 3.0              | $6.097 \times 10^{7}$ | $1.875 \times 10^{-3}$ |
+| 0.6         | 1.6036            | 3.6              | $7.316 \times 10^{7}$ | $2.250 \times 10^{-3}$ |
+| 0.7         | 1.6042            | 4.2              | $8.535 \times 10^{7}$ | $2.625 \times 10^{-3}$ |
+| 0.8         | 1.6048            | 4.8              | $9.755 \times 10^{7}$ | $3.000 \times 10^{-3}$ |
+| 0.9         | 1.6057            | 5.7              | $1.097 \times 10^{8}$ | $3.563 \times 10^{-3}$ |
+| 1.0         | 1.6070            | 7.0              | $1.219 \times 10^{8}$ | $4.375 \times 10^{-3}$ |
+| 1.1         | 1.6090            | 9.0              | $1.341 \times 10^{8}$ | $5.625 \times 10^{-3}$ |
+In our results above the wire deforms after $0.8kg$ so all values after are treated as anomalous.
 
 # Graph
-The graph should be plotted with $F_{t} L$ in $Nm$ on the y-axis and $A \Delta L$ in $m^{3}$ on the x-axis using this collected data. This gradient of this graph will give Young’s Modulus $(E)$ in $Nm^{-2}$ as its value.
+Below is a graph with Stress $(\sigma)$ in $Pa$ on the y-axis against Strain $(\varepsilon)$ without units on the x-axis using our collected data. This gradient of this graph gives Young’s Modulus $(E)$ in $Pa$ as its value. Based on this graph we obtained a value of $3.2516 \times 10^{10} Pa$ for the gradient.
+![[YoungsModulus.svg]]
 
 # Evaluation 
 - If the wire is extended past its elastic limit, it will be permanently deformed to reduce the risk of this, remove the load and check the wire returns to its original length before taking any new readings
