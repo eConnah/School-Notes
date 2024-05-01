@@ -5,6 +5,7 @@
 [[Finite State Machine]]
 [[Hand-Tracing]]
 [[Merge Sort]]
+[[Recursion]]
 [[Searching]]
 [[Solving Problems]]
 [[Sorting]]
