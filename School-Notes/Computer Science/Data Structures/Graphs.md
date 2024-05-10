@@ -10,3 +10,15 @@ A graph is a set of vertices or nodes connected by edges or arcs. Edges may be w
 # Adjacency Matrix
 Each row and colun represents a node, where the value at its location is its weight. The advantages are that it's convenient to work with, and adding an edge is simple. The disadvantages are that sparse graphs with not many connections (edges) will leave most of the cells empty, wasting a lot of memory space.
 A weighted graph can be represented as a dictionary of dictionaries, with each key in the dictionary being the node, and the value being a dictionary of adjacent nodes and edge weights.
+
+# Traversing
+## Depth First
+With depth-first, you go as far as you can down a path before backtracking and going down the next path. The algorithm uses a stack to keep track of the last node visited, and a list to hold the names of nodes that have been visited.
+
+Applications of depth first include:
+- Job-scheduling, where some jobs have to be completed before others can begin.
+- Finding a path between two vertices.
+- Solving puzzles such as navigating a maze
+
+## Breadth-First
+With breadth-first, you explore all the neighbours of the current vertex, then the neighbours of each of those vertices and so on.

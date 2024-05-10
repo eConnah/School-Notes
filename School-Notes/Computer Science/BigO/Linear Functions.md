@@ -1,0 +1,1 @@
+A linear function takes the form $f(n) = an + b$ where and b are constants. f(1) is a constant function — no matter how large n gets, f(1) stays the same size. The order of magnitude for a linear function is written O(n).
