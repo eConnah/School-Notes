@@ -1,17 +1,19 @@
-# Theory
-To measure the Young Modulus of a metal in the form of a wire using weights to adjust stress and strain.
+# Fundamental Objective
+To measure the <mark style="background: #ADCCFFA6;">Young’s Modulus</mark> of a metal in the form of a wire using weights to adjust <mark style="background: #FF5582A6;">Stress</mark> and <mark style="background: #FFB86CA6;">Strain</mark>.
 
 # Equations
 $$E = \frac{\sigma}{\varepsilon}$$
 $$E=\frac{F_{t}}{A} \div \frac{\Delta L}{L}$$
 $$E=\frac{F_{t} L}{A \Delta L}$$
 Where:
-- $E$ is young’s modulus, $(Nm^{-2})$
-- $\sigma$ is stress, $(Nm^{-2})$
-- $\varepsilon$ is strain, (no units)
+- $E$ is <mark style="background: #ADCCFFA6;">Young’s Modulus</mark>, $(Nm^{-2})$
+- $\sigma$ is <mark style="background: #FF5582A6;">Stress</mark>, $(Nm^{-2})$
+- $\varepsilon$ is <mark style="background: #FFB86CA6;">Strain</mark>, (no units)
 - $F_{t}$ is tension, $(N)$
 - $L$ is length, $(m)$
 - $A$ is cross-sectional area, $(m^{2})$
+
+<div style="page-break-after: always;"></div>
 
 # Practical
 ## Equipment
@@ -33,12 +35,12 @@ Where:
 - Make sure a cushion or soft surface is kept directly below the mass hanger, in case it falls off
 
 ## Variables
-<mark style="background: #D2B3FFA6;">Independent</mark> variable: Load, (N)
-<mark style="background: #BBFABBA6;">Dependent</mark> variable: Extension, (m)
-<mark style="background: #FF5582A6;">Control</mark> variables: Length, Thickness and Material of wire
+Independent variable: Load, $(N)$
+Dependent variable: Extension, $(m)$
+Control variables: Length, Thickness and Material of wire
 
 ## Method
-1. Measure the diameter of the wire with a micrometre screw gauge or digital callipers. Take at least 3 readings and find an average.
+1. Measure the diameter of the wire with a micrometer screw gauge or digital callipers. Take at least 3 readings and find an average.
 2. Set up the apparatus so the wire is taut. No masses should be on the mass hanger just yet.
 3. Measure the original length of the wire using a metre ruler and mark a reference point with tape preferably near the beginning of the scale.
 4. Record initial reading on the ruler of the reference point.
@@ -64,13 +66,23 @@ Where:
 | 1.1         | 1.6090            | 9.0              | $1.341 \times 10^{8}$ | $5.625 \times 10^{-3}$ |
 In our results above the wire deforms after $0.8kg$ so all values after are treated as anomalous.
 
+<div style="page-break-after: always;"></div>
+
 # Graph
-Below is a graph with Stress $(\sigma)$ in $Pa$ on the y-axis against Strain $(\varepsilon)$ without units on the x-axis using our collected data. This gradient of this graph gives Young’s Modulus $(E)$ in $Pa$ as its value. Based on this graph we obtained a value of $3.2516 \times 10^{10} Pa$ for the gradient.
+Below is a graph with <mark style="background: #FF5582A6;">Stress</mark> $(\sigma)$ in $Pa$ on the y-axis against <mark style="background: #FFB86CA6;">Strain</mark> $(\varepsilon)$ without units on the x-axis using our collected data. This gradient of this graph gives <mark style="background: #ADCCFFA6;">Young’s Modulus</mark> $(E)$ in $Pa$ as its value. Based on the gradient of this graph our <mark style="background: #FFF3A3A6;">measured value</mark> is $3.2516 \times 10^{10} Pa$. This is about $2.94 \%$ off <mark style="background: #BBFABBA6;">true value</mark> of $3.35 \times 10^{10} Pa$.
 ![[YoungsModulus.svg]]
 
-# Evaluation 
-- If the wire is extended past its elastic limit, it will be permanently deformed to reduce the risk of this, remove the load and check the wire returns to its original length before taking any new readings
-- Parallax error from reading the marker on the ruler
+<div style="page-break-after: always;"></div>
+
+# Evaluation
+The discrepancy between the <mark style="background: #BBFABBA6;">true value</mark> and our <mark style="background: #FFF3A3A6;">measured value</mark> for <mark style="background: #ADCCFFA6;">Young’s Modulus</mark> can be attributed to:
+- In the case the wire is extended past its elastic limit it will be permanently deformed. To reduce the risk of this next time, remove the load and check the wire returns to its original length before taking any new readings.
+- Parallax error from reading the marker on the ruler. To fix this make sure while taking measurements you have the point at eye level.
+- Difficulty in accurately measuring the small extensions of the wire, leading to error in calculating <mark style="background: #FFB86CA6;">Strain</mark>.
+- Imperfections, impurities or irregularities in the wire material that could affect its elastic properties.
+- Systematic errors in measuring the wire diameter, length or applied forces.
+- Heat transfer from surroundings affecting the wire's properties during the experiment.  
+With our percentage error $(2.94 \%)$ being below $5 \%$, it indicates reasonable accuracy for this experiment. To improve further, more precise measurement tools like digital callipers, more controlled environmental conditions, and repetition with multiple wire samples could help reduce errors.
 
 # References
 Method (29-04-24):
