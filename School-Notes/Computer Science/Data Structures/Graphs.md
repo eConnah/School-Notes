@@ -21,4 +21,9 @@ Applications of depth first include:
 - Solving puzzles such as navigating a maze
 
 ## Breadth-First
-With breadth-first, you explore all the neighbours of the current vertex, then the neighbours of each of those vertices and so on.
+With breadth-first, you explore all the neighbours of the current vertex, then the neighbours of each of those vertices and so on. The algorithm uses a queue to keep track of nodes that still need to be visisted.
+
+Applications of breadth first include:
+- Finding the shortest path between two points.
+- A web crawler uses a breadth first search to analyse sites that you can reach by following links randomly.
+- Facebook uses a breadth first search to find all the friends of a given individual.
