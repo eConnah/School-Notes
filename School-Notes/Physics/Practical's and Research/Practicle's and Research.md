@@ -1,7 +1,7 @@
 [[Calculating Resistivity]]
 [[Detecting Particles]]
 [[Gravity in Freefall]]
-[[Internal Resistance]]
+[[Internal Resistance & EMF]]
 [[Plotting IV Graphs]]
 [[Stationary Wave Practical]]
 [[Young's Double Slit]]
