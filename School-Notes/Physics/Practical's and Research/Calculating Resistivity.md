@@ -7,6 +7,11 @@ The <mark style="background: #FF5582A6;">Resistivity</mark> ($\rho$) of a materi
 # Equations
 $$R = \rho LA^{-1}$$
 $$\rho = RAL^{-1}$$
+Where:
+- $R$ is <mark style="background: #ADCCFFA6;">Resistance</mark>, $(\ohm)$
+- $\rho$ is <mark style="background: #FF5582A6;">Resistivity</mark>, $(\ohm m)$
+- $L$ is length, $(m)$
+- $A$ is cross-sectional area, $(m^{2})$
 
 <div style="page-break-after: always;"></div>
 
