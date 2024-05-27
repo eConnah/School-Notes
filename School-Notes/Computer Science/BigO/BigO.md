@@ -1,4 +1,5 @@
 [[Big-O Notation]]
+[[Linear Functions]]
 [[Logarithmic Functions]]
 [[Permutations No Repetitions]]
 [[Quadratic Functions]]
