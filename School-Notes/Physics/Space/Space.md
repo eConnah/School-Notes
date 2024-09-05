@@ -1,2 +1,6 @@
-[[Star Life Cycle]]
+[[Lenses]]
+[[Magnification]]
+[[Spectral Classes]]
+[[Star Lifecycle]]
 [[Star Properties]]
+[[Stars]]
