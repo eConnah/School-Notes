@@ -7,3 +7,6 @@ The symbols for a finite state machine are as follows:
 - Circle (input arrow cut off): Start State
 - Circle (inside a circle): End State
 - Transition: Curved arrow
+
+# Mealy Machine
+The notation used for the transition condition is the input/ouput. It can be used to map an input sequence to an output sequence. It is used in language parsing and can also be used to translate text.

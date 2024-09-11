@@ -1,0 +1,1 @@
+Regular expressions are patterns used to specify a set of strings using a special notation. They're used for finding particular words in a stream or finding combinations of characters in strings. They define a set of acceptable strings in a language but they are not equivalent to wildcards. A language is regular if it can be represented by a finite state machine or regex.
