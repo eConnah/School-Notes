@@ -5,4 +5,4 @@ The computer base unit contains the following components:
 - Processor
 - Main memory
 - Address, control and data buses
-- [IO Controller|Input/Output (IO) Controllers]
+- [[IO Controller|Input/Output (IO) Controllers]]

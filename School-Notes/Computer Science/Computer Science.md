@@ -4,6 +4,10 @@
 
 ![[Binary]]
 
+![[Coding]]
+
+![[Communication]]
+
 ![[Computational Thinking]]
 
 ![[Data Structures]]
@@ -17,6 +21,8 @@
 ![[Language Classification]]
 
 ![[Object Orientated Programming]]
+
+![[Regular Lanuages]]
 
 ![[Software]]
 

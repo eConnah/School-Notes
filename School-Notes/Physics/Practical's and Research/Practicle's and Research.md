@@ -1,4 +1,5 @@
 [[Calculating Resistivity]]
+[[Centripetal Force Practical]]
 [[Detecting Particles]]
 [[Gravity in Freefall]]
 [[Internal Resistance & EMF]]

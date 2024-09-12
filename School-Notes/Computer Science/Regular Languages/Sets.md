@@ -1,4 +1,4 @@
-Sets formalise the idea of grouping objects together and viewing them as a single entitty, in this way a set becomes an abstraction, there is a close relationship between set theory and logic, the laws governing sets form part of the governing group. A set is a well definded collection of objects, objects in the set are members or elements. A set is unordered and is denoted by a capital letter while members are usually lowercase letters. A set can be defined by listing every member enclosed by { }.
+Sets formalise the idea of grouping objects together and viewing them as a single entity, in this way a set becomes an abstraction, there is a close relationship between set theory and logic, the laws governing sets form part of the governing group. A set is a well defined collection of objects, objects in the set are members or elements. A set is unordered and is denoted by a capital letter while members are usually lowercase letters. A set can be defined by listing every member enclosed by { }.
 
 To say something is a member of a set you write $$x \in \mathbb{I} \wedge \text{is even}$$
 
