@@ -4,9 +4,9 @@ To estimate the order of magnitude, identify the significant digits (reliable 
 
 Here's a table summarising the common order of magnitude names:
 
-| Name               | tera              | giga             | mega             | kilo             | mili              | micro             | nano              | pico               |
-| ------------------ | ----------------- | ---------------- | ---------------- | ---------------- | ----------------- | ----------------- | ----------------- | ------------------ |
-| Order of Magnitude | $1 \cdot 10^{12}$ | $1 \cdot 10^{9}$ | $1 \cdot 10^{6}$ | $1 \cdot 10^{3}$ | $1 \cdot 10^{-3}$ | $1 \cdot 10^{-6}$ | $1 \cdot 10^{-9}$ | $1 \cdot 10^{-12}$ |
+| Name               | tera              | giga             | mega             | kilo             | mili              | micro             | nano              | pico               | femto              |
+| ------------------ | ----------------- | ---------------- | ---------------- | ---------------- | ----------------- | ----------------- | ----------------- | ------------------ | ------------------ |
+| Order of Magnitude | $1 \cdot 10^{12}$ | $1 \cdot 10^{9}$ | $1 \cdot 10^{6}$ | $1 \cdot 10^{3}$ | $1 \cdot 10^{-3}$ | $1 \cdot 10^{-6}$ | $1 \cdot 10^{-9}$ | $1 \cdot 10^{-12}$ | $1 \cdot 10^{-15}$ |
 
 Orders of magnitude are beneficial due to:
 - Rapid Calculations: Estimating allows quick checks on calculations. If your result falls outside the expected order of magnitude, it likely indicates an error.
