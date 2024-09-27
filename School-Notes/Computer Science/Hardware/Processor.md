@@ -10,7 +10,7 @@ The part of the processor that coordinates the activity of all other components 
 # System Clock
 The system clock is a series of regular ON/OFF signals that are used to synchronise the operations of the processors components. Actions are usually carried out on the rising edge of the clock, and each action takes a fixed number of cycles to complete.
 
-# Gemeral Purpose Registers
+# General Purpose Registers
 Results from the ALU need to be stored somewhere, rather than writing working data back to 'slow' memory, processors have several locations of super-fast memory called registers that are used to temporarily store results. The processor is then able to immediately access and re-use these results in subsequent calculations, some processors only have a single general purpose register called an Accumulator.
 
 # Registers
@@ -26,6 +26,35 @@ Carrying out sequences of programming instructions requires many different snipp
 
 # Fetch-Execute Cycle
 Processors operate in defined stages that are used to carry out program instructions The process is repeated over and over again for each instruction in a program. The Fetch-Execute cycle is triggered from the clock pulses of the system clock. The faster the clock speed, the faster a computer can fetch, decode and execute instructions
+
+The **fetch-execute cycle**, also known as the **instruction cycle**, is the fundamental process by which a computer's central processing unit (CPU) operates to execute instructions. Here’s a breakdown of the steps:
+
+## Fetch
+   Step 1: PC (Program Counter) Points to Next Instruction
+     The Program Counter holds the memory address of the next instruction to be executed.
+   Step 2: Instruction is Retrieved from Memory
+     The CPU fetches the instruction stored at the memory address pointed to by the Program Counter.
+   Step 3: Update the Program Counter
+     After fetching the instruction, the Program Counter is updated to point to the next instruction, typically incrementing to the next address in memory.
+   
+## Decode
+   Step 1: Instruction Decoding
+     The fetched instruction is sent to the instruction decoder, where the CPU determines what the instruction is and what it needs to do.
+   Step 2: Identify Operands
+     The instruction may contain references to data or operands that are stored in registers or memory, which need to be accessed.
+
+## Execute
+   Step 1: Perform the Operation
+     The CPU carries out the decoded instruction. This could involve performing an arithmetic operation (e.g., addition), a logical operation (e.g., comparison), moving data between registers, or interacting with input/output devices.
+   
+## Store (or Write Back)
+   Step 1: Store Result (if necessary)
+     The result of the executed instruction is written back to a specific register or memory location, if required.
+
+## Repeat
+   After storing the result, the cycle starts again with the next instruction being fetched from the location specified by the updated Program Counter.
+
+The process repeats continuously while the CPU is operating, allowing it to execute programs.
 
 # Cache Memory
 Cache is a small amount of superfast memory that stores data that is frequently used by the processor. It's larger but slower than a register, and faster but smaller than RAM. Larger amounts of cache memory can improve processing speed.
