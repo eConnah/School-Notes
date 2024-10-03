@@ -1,6 +1,3 @@
-# Star Lifecycle
-
-
 # Star Properties
 One property of stars is known as <mark style="background: #FFF3A3A6;">luminosity</mark> which is the rate a star releases energy in the form of light. <mark style="background: #FF5582A6;">Intensity</mark> is the <mark style="background: #FFF3A3A6;">luminosity</mark> of a star per unit area and has the unit $Wm^{-2}$. The <mark style="background: #FF5582A6;">intensity</mark> of a star follows the inverse square law meaning it’s inversely proportional to the square of the distance. <mark style="background: #FF5582A6;">Intensity</mark> is the effective brightness of an object.
 

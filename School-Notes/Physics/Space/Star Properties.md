@@ -4,6 +4,7 @@ The intensity of a star is the power received by an observer per unit area.
 $$\text{Intensity} = \frac{\text{Power Received}}{\text{Area}}$$
 
 Apparent Magnitude $(m)$ as a way to quantify the perceived brightness of astronomical objects from Earth. It's not a direct measure of an object's true luminosity, but rather a combination of an object's luminosity and its distance from us.
+Absolute magnitude is what the apparent magnitude would be if the same object was 10 parsecs away.
 The absolute magnitude and apparent magnitude are linked by the following equation
 $$m - M = 5 \log \frac{d}{10}$$
 Where:
@@ -22,4 +23,7 @@ Where:
 | Altair    | 0.8                |
 | Polaris   | 2.0                |
 
-The parsec $(pc)$ is the most commonly used astronomical unit but it is the most difficult unit to define. One parsec is the distance which causes a parallax angle of 1 arcsecond to be observed.
+# Astronomical Units
+- The parsec $(pc)$ is the most commonly used astronomical unit but it is the most difficult unit to define. One parsec is the distance which causes a parallax angle of 1 arcsecond to be observed. $1 pc = 3.08 \times 10^{16}m$
+- 1 Astronomical Unit $(AU)$ is the mean distance of the sun / Earth orbit. $1 AU = 1.50 \times 10^{11}m$
+- 1 Light Year $(ly)$ is the distance that light can travel in one year in a vacuum. $1 ly = 9.45 \times 10^{15}m$
