@@ -34,3 +34,5 @@ This method works by building a binary tree from the infix expression and then t
 1. Decompose operands into two child nodes; pay attention to precedence and brackets.
 2. Choose the highest precedence operator not embedded in parentheses, as the root.
 3. / has been chosen as the root in the tree below, but you could equally well choose * as it has equal precedence.
+
+$$45-\frac{96}{3} + 2^{3}$$

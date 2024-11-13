@@ -1,4 +1,4 @@
-Each entity needs an identifier which uniquely identifies a particular record. In a relational database the identifier is known as the primary key. Sometimes two or even more attributes are needed to uniquely define a record. For example in a customer order consisting of many different order lines each order line may be uniquely identified by the two attributes orderNUmber and orderLine.
+Each entity needs an identifier which uniquely identifies a particular record. In a relational database the identifier is known as the primary key. Sometimes two or even more attributes are needed to uniquely define a record. For example in a customer order consisting of many different order lines each order line may be uniquely identified by the two attributes orderNumber and orderLine.
 There are three possible ways in which two entities may be related:
 - One to One
 - One to Many
