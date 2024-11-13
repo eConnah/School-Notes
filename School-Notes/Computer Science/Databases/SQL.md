@@ -3,7 +3,16 @@
 ```sql
 SELECT column1, column2, ...
 FROM table_name
-WHERE condition;
+WHERE condition | WHERE attribute LIKE pattern;
+```
+The LIKE pattern is optional but can be used to only return values that look similar such as Comp* will return all values starting with Comp.
+
+**ORDER BY**: The ORDER BY statement is used to sort the result-set in ascending or descending order.
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
 ```
 
 **INSERT**: The INSERT statement is used to add new data to a database.
@@ -70,10 +79,4 @@ GROUP BY column1, column2, ...
 HAVING condition;
 ```
 
-**ORDER BY**: The ORDER BY statement is used to sort the result-set in ascending or descending order.
 
-```sql
-SELECT column1, column2, ...
-FROM table_name
-ORDER BY column1, column2, ... ASC|DESC;
-```

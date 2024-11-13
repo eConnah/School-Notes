@@ -18,6 +18,8 @@
 
 ![[Hardware]]
 
+![[Internet]]
+
 ![[Language Classification]]
 
 ![[Object Orientated Programming]]
