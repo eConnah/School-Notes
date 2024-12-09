@@ -12,7 +12,7 @@
 
 ![[Measurements]]
 
-![[Mechanics]]
+![[Physics/Mechanics/Mechanics]]
 
 ![[Practicle's and Research]]
 

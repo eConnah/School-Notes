@@ -18,7 +18,6 @@ Where:
 - Masses
 - Stopwatch
 - Metre Ruler
-- Pendulum
 
 ## Diagram
 ![[MassSpringSystem.avif|center|450]]
@@ -84,8 +83,7 @@ The discrepancy between the true value and the measured value for the <mark styl
 - Oscillation amplitude (large amplitudes causing non-linear effects).
 With our percentage error being around $12 \%$ it indicates room for improvement but the results weren’t bad with our coefficient of determination being $0.999$. This implies our results were extremely precise and the error could be a constant systematic error instead of a human error.
 
-## References
+# References
 Method and Diagram (03/10/24):
 - Ashika (2017). _Required Practical: Investigating SHM (6.2.8) | AQA A Level Physics Revision Notes 2017_. [online] Save My Exams. Available at: https://www.savemyexams.com/a-level/physics/aqa/17/revision-notes/6-further-mechanics--thermal-physics/6-2-simple-harmonic-motion/6-2-8-required-practical-investigating-shm/.
-
 ‌

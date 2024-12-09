@@ -27,3 +27,10 @@ Where:
 - The parsec $(pc)$ is the most commonly used astronomical unit but it is the most difficult unit to define. One parsec is the distance which causes a parallax angle of 1 arcsecond to be observed. $1 pc = 3.08 \times 10^{16}m$
 - 1 Astronomical Unit $(AU)$ is the mean distance of the sun / Earth orbit. $1 AU = 1.50 \times 10^{11}m$
 - 1 Light Year $(ly)$ is the distance that light can travel in one year in a vacuum. $1 ly = 9.45 \times 10^{15}m$
+
+# Masses
+Any star with a mass of more than 8x our sun is considered a High Mass Star. High mass stars are hotter as the mass squeezes hydrogen harder causing faster fusion. A red dwarf is $\frac{1}{3}$ the mass of our sun, they are the longest lasting type of stars. As main sequence stars get older they get brighter. When a star grows it gives off more energy but the size grows faster leading to a colder star. A low mass star cannot fuse anything more than carbon, ever.
+
+White dwarfs are the end of low mass stars, roughly the size of earth. They don’t generate energy but they do give off energy charging planetary nebulae; gas clouds that came from the previous layers of the star when it was still a red giant. This makes them glow.
+
+Iron is the last element a supermassive star will fuse, this is because it needs energy to fuse instead of creating energy.
