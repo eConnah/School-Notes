@@ -20,4 +20,6 @@
 
 ![[Space]]
 
+![[Thermal]]
+
 ![[Waves]]

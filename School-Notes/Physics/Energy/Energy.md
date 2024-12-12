@@ -1,4 +1,5 @@
 [[Fluorescence]]
+[[Gravitational Potential]]
 [[Intensity]]
 [[Ionisation]]
 [[Photon Energy]]

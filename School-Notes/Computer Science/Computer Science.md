@@ -22,9 +22,13 @@
 
 ![[Language Classification]]
 
+![[NEA]]
+
 ![[Object Orientated Programming]]
 
 ![[Regular Lanuages]]
+
+![[Skeleton Code]]
 
 ![[Software]]
 
