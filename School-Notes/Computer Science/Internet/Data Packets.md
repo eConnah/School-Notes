@@ -1,0 +1,1 @@
+At its core a data packets is a segment of data that needs to be sent often referred to as the payload. Packets are deliberately kept small to ensure that individual packets do not take excessive time to transfer preventing other packets from moving. The header contains the recipients address so that it can be directed appropriately across the network.
