@@ -18,19 +18,78 @@ So I began looking for games that could satisfy this craving, but found that mos
 I have received their agreement that they will help test the development of my game alongside its progress.
 
 # Plan
+## Minigame One
+```mermaid
+flowchart LR
+
+    A[Step One] --> B(Create Class Diagram Plan)
+
+    B --> C(Implement Classes in C#)
+
+```
+```mermaid
+flowchart LR
+	
+	C[Step Two] --> D(Setup all code to work with empty game objects)
+
+    D --> E(Replace empty game objects with functioning objects)
+    
+```
+```mermaid
+flowchart LR
+
+    E[Step Three] --> F(Debug and complete)
+    
+```
+```mermaid
+classDiagram
+
+    Tower <|-- Snipper
+
+    TowerManager <|-- SnipperManager
+
+    class Tower{
+
+        -float range
+
+        -float damage
+
+        -float fireRate
+
+        -string targetMode
+
+        -string effects
+
+        -GameObject tower
+
+        +TowerStats()
+
+    }
+
+    class TowerManager{
+
+        -List towers
+
+        -int existingTowers
+
+        +TowerStats()
+
+    }
+
+    class Snipper{
+
+  
+
+    }
+
+    class SnipperManager{
+
+    }
+```
 
 ```mermaid
-flowchart TD
-
-    A[Start Devlopment] -->|create the base game| B(Base Game Exists)
-
-    B -->|create the first minigame| C(Minigame One Exists)
-
-    C --> D{Major Choice}
-
-    D -->|further develop minigame one| E(One Good Minigame Exists)
-
-    D -->|develop minigame two| F(Two Minigames Exist)
+flowchart LR
+Start --> Stop
 ```
 
 # idk yet
