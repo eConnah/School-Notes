@@ -16,6 +16,8 @@
 
 ![[File Storage]]
 
+![[Functional Programming]]
+
 ![[Hardware]]
 
 ![[Internet]]
