@@ -1,6 +1,8 @@
+[[Capacitors]]
 [[Current]]
 [[Electric Fields]]
 [[Electro-Motive Force (EMF)]]
+[[Magnetic Flux Density]]
 [[Ohm's Law]]
 [[Potential Difference]]
 [[Power]]

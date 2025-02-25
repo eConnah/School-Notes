@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 # Fundamental Objective
 The overall aim of this experiment is to investigate Boyle's Law - the is the effect of pressure on volume at a constant temperature.
 
@@ -20,6 +12,8 @@ Where:
 - F is force, $(N)$
 - $A$ is cross-sectional area, $(m^{2})$
 - r is radius, $(m)$
+
+<div style="page-break-after: always;"></div>
 
 # Practical
 ## Equipment
@@ -38,6 +32,8 @@ Where:
 - Over-pressurising, causing the syringe to explode violently.
 - Breaking glass if syringe is glass.
 - Masses causing harm.
+
+<div style="page-break-after: always;"></div>
 
 ## Variables
 Independent variable - Mass
@@ -70,44 +66,15 @@ Control variables:
 | 1.1 kg | 4ml     | 3.50 ml | 3.20 ml | 3.57 ml |
 
 ## Graph        
+![[BoylesLaw.svg]]
 
-
-The table of results may need to be modified to fit these extra calculations. Here is an example of how this might look:
-    
-
-Boyles Example Table of Results 2, downloadable AS & A Level Physics revision notes
-
-Once these values are calculated:
-    
-
-Plot a graph of p against 1 / V and draw a line of best fit
-    
-If this plot is a straight line graph, this means that the pressure is proportional to the inverse of the volume, hence confirming Boyle's Law (pV = constant)
-    
-
-Boyles Law Example Graph, downloadable AS & A Level Physics revision notes
-![[https://cdn.savemyexams.com/cdn-cgi/image/f=auto,width=3840/]]![[https://cdn.savemyexams.com/uploads/2021/05/6.5.6-Boyles-Law-Example-Graph.png]]
-
-Evaluating the Experiment
-
+## Evaluation
 Systematic Errors:
-
-There may be friction in the syringe which causes a systematic error
-    
-Use a syringe that has very little friction or lubricate it, so the only force applied is from the masses pulling the syringe downward
-        
-
+- There may be friction in the syringe which causes a systematic error, to fix this use a syringe that has very little friction or lubricate it. So the only force applied is from the masses pulling the syringe downward.
 Random Errors:
+- The reading of the volume should be taken a few seconds after the mass has been added to the holder. Otherwise, a reading will be taken when the temperature is not constant
+- Due to the nature of this experiment setup, it is prone to many random errors. Take repeat readings to reduce their effect
 
-The reading of the volume should be taken a few seconds after the mass has been added to the holder
-    
-Otherwise, a reading will be taken when the temperature is not constant
-        
-Due to the nature of this experiment setup, it is prone to many random errors
-    
-Take repeat readings to reduce their effect
-        
-
-Safety Considerations
-
-A counterweight or G-clamp must be used to avoid the stand toppling over and causing injury, especially if the surface is not completely flat
+# References
+Diagrams and Methods (09-01-25):
+- Ashika (2024). _Required Practical: Investigating Gas Laws | AQA A Level Physics Revision Notes 2017_. [online] Save My Exams. Available at: https://www.savemyexams.com/a-level/physics/aqa/17/revision-notes/6-further-mechanics-and-thermal-physics/6-5-ideal-gases/6-5-6-required-practical-investigating-gas-laws/.
