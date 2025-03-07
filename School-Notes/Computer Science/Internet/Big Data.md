@@ -1,0 +1,1 @@
+Traditional data processing involving relational databased des not suit either the volume or variety of big data. The fact based model captures a single piece of information. Often there is value in exploring relationships between connected entities in a dataset.
