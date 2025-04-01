@@ -1,1 +1,0 @@
-The output of a star is due to nuclear fusion reactions in the core, in main sequence stars this is due to hydrogen being fused into helium.

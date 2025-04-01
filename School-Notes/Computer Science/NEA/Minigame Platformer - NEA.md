@@ -256,7 +256,7 @@ Risks & Contradictions
 - Open-World vs. Short Sessions: Balance sandbox freedom with clear stopping points. (May be hard to implement sandbox elements).
 
 ### User Needs
-- [ ] Simple, satisfying movement mechanics (e.g., jumping).
+- [x] Simple, satisfying movement mechanics (e.g., jumping).
 - [ ] Short, completable sessions (10–15 minutes).
 - [ ] Calming visuals and ambient music.
 - [ ] Small, frequent rewards (e.g., collectibles, visual/audio feedback).
@@ -378,169 +378,87 @@ flowchart LR
 
 config:
 
-  layout: elk
+layout: elk
 
 ---
 
 classDiagram
 
-    class GameManager {
+direction BT
 
-        + List~GameObject~ towerManagers
+class GameManager {
 
-        + UpgradeMenu upgradeMenu
+gameSpeed
 
-        + List~GameObject~ balloons
+}
 
-        + GameObject tempBalloon
+class Player {
 
-        + TimeController time
+money
 
-        + void Awake()
+health
 
-        + void Start()
+}
 
-        + IEnumerator StartRound()
+class TowerManager~T~ {
 
-        + void Update()
+Initialise()
 
-    }
+}
 
-    class Player {
+class Tower {
 
-        + int health
+damage
 
-        + int money
+}
 
-        + TextMeshProUGUI healthGUI
+class Snipper {
 
-        + TextMeshProUGUI moneyGUI
+sweepAttack
 
-        + int GetMoney()
+}
 
-        + void UpdateBalance(in amount: int)
+class UpgradeMenu {
 
-        + int GetHealth()
+Upgrade(path)
 
-        + void ChangeHealth(in amount: int)
+}
 
-        + void Start()
+class SnipperManager {
 
-    }
+List~Snipper~
 
-    class Tower {
+}
 
-        <<abstract>>
+class TowerUpgradeSystem {
 
-        + float Range
+Dictionary~path, int~ pathTiers
 
-        + TowerUpgradeSystem UpgradeSystem
+}
 
-        + Dictionary~UpgradePathType, int~ PathUpgrades
+  
 
-        + void AttemptUpgrade(in path: UpgradePathType)
+<<abstract>> TowerManager
 
-        + void OpenUpgradeMenu()
+<<abstract>> Tower
 
-        + void ApplyUpgradeEffects(in path: UpgradePathType, in tier: int)
+  
 
-        + Balloon GetPriorityTarget()
+SnipperManager --|> TowerManager
 
-    }
+Snipper --|> Tower
 
-    class TowerUpgradeSystem {
+Snipper "*" --* "1" SnipperManager
 
-        + Dictionary~UpgradePathType, int~ pathTiers
+TowerUpgradeSystem --* Snipper
 
-        + Dictionary~UpgradePathType, (bool, bool)~ pathLocks
+TowerUpgradeSystem ..|> Player
 
-        + List~UpgradePathType~ initialPaths
+TowerManager ..|> Player
 
-        + Player player
+Player --* GameManager
 
-        + bool CanUpgrade(in path: UpgradePathType, in tower: Tower)
-
-        + int GetTier(in path: UpgradePathType)
-
-        + bool IsPathLocked(in path: UpgradePathType)
-
-        + void LockThirdPathIfNeeded()
-
-    }
-
-    class UpgradeMenu {
-
-        + Tower tower
-
-        + TowerUpgradeSystem upgrades
-
-        + Sprite lockedSprite
-
-        + GameObject upgradeOne
-
-        + GameObject upgradeTwo
-
-        + GameObject upgradeThree
-
-        + GameObject defaultState
-
-        + void Awake()
-
-        + void Start()
-
-        + void OpenUpgradeMenu(in tower: Tower)
-
-        + void CloseUpgradeMenu()
-
-        + void BuyUpgradeOne()
-
-        + void BuyUpgradeTwo()
-
-        + void BuyUpgradeThree()
-
-    }
-
-    class TowerManager~T~ {
-
-        <<abstract>>
-
-        + GameObject newTower
-
-        + Player player
-
-        + bool isPlacing
-
-        + Vector2 mousePosition
-
-        + Tilemap allowedAreaTilemap
-
-        + TilemapCollider2D allowedArea
-
-        + TextMeshProUGUI shopPrice
-
-        + string towerName
-
-        + int cost
-
-        + int spriteIndex
-
-        + List~GameObject~ towers
-
-        + void BuyTower()
-
-        + void Initialise()
-
-        + void Update()
-
-        + string GetTowerName()
-
-    }
-
-    class SnipperManager {
-
-        + SnipperManager()
-
-    }
+TowerUpgradeSystem "*" -- "1" UpgradeMenu
 ```
 
 # Code

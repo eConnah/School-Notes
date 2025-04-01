@@ -1,4 +1,6 @@
+[[Magnetic Flux Density]]
 [[Strong Nuclear Force]]
 [[Tensile Strain]]
 [[Tensile Stress]]
+[[The Motor Effect]]
 [[Youngs's Modulus]]
