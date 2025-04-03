@@ -10,17 +10,20 @@ debugInConsole: false # Print debug info in Obsidian console
 ```
 
 # Analysis
-## The Problem
+## Problem Background
 Late at night, while in a call with my friends, I often find myself feeling bored, but do not wish to commit to anything complex, although I could simply go to bed, I, like many teenagers tend to avoid early bedtimes. I just crave something simple to engage me, a quick, easy distraction preferably a game. Curious about what my friends were doing in similar moments, I asked them, but they were often the same, either doing nothing or just aimlessly jumping around in whatever game they're playing. I noticed the same thing about me actually, we all seem to lean towards jumping around, there seems to be something mildly satisfying about bouncing about in a game.
 
 So I began looking for games that could satisfy this craving, but found that most were either too complex for my sleep deprived brain or too lengthy to enjoy for an hour before bed. Due to the lack of an ideal option, I decided to develop my own solution: a game designed to provide a simple yet satisfying experience before bed. The game will allow me and my friends to jump around while completing little tasks along the way, offering a brief but satisfying distraction.
 
 I have received their agreement that they will help test the development of my game along its progress. As well as provide feedback. My target demographic consists of teenagers who engage in frequent gaming and seek low-commitment entertainment options late at night.
 
-## Research
-### Online
-After researching this phenomenon I discovered it had a name "Revenge Bedtime Procrastination" (sometimes revenge is excluded) and it wasn't just prevalent in teenagers but also adults. This led  me to update my target audience to include all ages.
+## Problems with the Current System
+Currently video games are designed to hook you in, they usually want more people to keep playing their game in order to generate a profit. There are no games that are designed to help you wind down purposefully. This is most likely due to the fact businesses need money to operate and why this project is only really possible as a form of charity.
 
+## Potential Clients
+After researching this phenomenon I discovered it had a name "Revenge Bedtime Procrastination" (sometimes revenge is excluded) and it wasn't just common in teenagers but also adults. This has led me to target my game to gamers of all ages, people who struggle to sleep as they want more time to relax.
+
+## Research
 Revenge bedtime procrastination is where individuals deliberately delay going to bed to reclaim some relaxation time that is otherwise lost in their daytime due to things such as school or work. It's particularly common among teenagers, whose busy schedules from homework and revision and early school start times leave them with little time for relaxation. Research from Wikipedia and by the Sleep Foundation indicates that many young people, despite knowing they need to sleep more, fall into a cycle where immediate activities that give dopamine (like gaming, scrolling social media, or watching TV) overpowers their intention to get enough rest.
 
 Studies suggest that as the day progresses, the self-control of individuals tends to diminish, making them more susceptible to procrastinating. Additionally, having a digital device worsens this effect by delaying melatonin production shifting the natural sleep cycle further. Research from Verywell Mind (linked in references) highlights that for many, this delay isn’t about avoiding sleep but about regaining a sense of control after a day filled with work.
@@ -29,10 +32,10 @@ However the long-term consequences of sleep delay can be significant. Chronic sl
 
 After realising its detrimental effects I was driven to update my goals from just providing a source of entertainment to also promoting better sleep. Hopefully when people are procrastinating they decide to launch my game in which I will provide a short amount of entertainment before ending the game in such a way that they'll feel satisfied and are compelled to go to sleep after completing it.
 
-### Survey
-#### Design
+## Surveys
+### Tolos44
 What is your Age Group:
-- [ ] Under 18
+- [x] Under 18
 - [ ] 18–25
 - [ ] 26–35
 - [ ] 36–45
@@ -43,31 +46,95 @@ How often do you delay going to bed to engage in leisure activities (e.g., gamin
 - [ ] Rarely
 - [ ] Sometimes
 - [ ] Often
-- [ ] Always
+- [x] Always
 
 When you game late at night, what type of games do you prefer? (Multiple choice)
 - [ ] Simple/casual games (e.g., mobile games, puzzles)
-- [ ] Competitive games (e.g., shooters, MOBAs)
-- [ ] Open-world/sandbox games (e.g., Minecraft)
+- [x] Competitive games (e.g., shooters, MOBAs)
+- [x] Open-world/sandbox games (e.g., Minecraft)
 - [ ] Social games (e.g., Among Us, VRChat)
 - [ ] Other: 
 
-What frustrates you most about very-late-night gaming? (Rank 1–5, 1 = most frustrating)
-- Requires too much focus/effort
-- Games take too long to complete
-- Lack of satisfying "quick wins"
-- Social pressure (e.g., teammates relying on you)
-- Difficulty stopping once started
+What frustrates you most about very-late-night gaming? (Scale 1–5, 1 = most frustrating)
+- Requires too much focus/effort - 1
+- Games take too long to complete - 2 
+- Lack of satisfying "quick wins" - 2
+- Social pressure (e.g., teammates relying on you) - 3
+- Difficulty stopping once started - 5
 
 Do you ever find yourself mindlessly jumping/moving in-game when bored?
 - [ ] Yes, frequently
-- [ ] Occasionally
+- [x] Occasionally
+- [ ] Rarely
+- [ ] Never    
+
+Why do you delay going to bed? (Select all)
+- [x] To reclaim personal time lost during the day
+- [x] To relax/unwind
+- [ ] Fear of missing out (FOMO)
+- [x] Habit
+- [ ] Other: 
+
+How satisfied do you feel after a late-night gaming session?
+- [ ] Very satisfied
+- [ ] Satisfied
+- [x] Neutral
+- [ ] Dissatisfied
+- [ ] Very dissatisfied
+
+Would you play a game designed to help you wind down before bed?
+- [ ] Yes, if it’s quick and satisfying
+- [ ] Maybe, depending on the gameplay
+- [x] No, I prefer other activities
+
+Rate how appealing these features sound for a late-night game: (Scale 1–5, 1 = least appealing)
+- Simple controls (e.g., jump/run) - 1
+- Short, completable sessions (10–15 minutes) - 4
+- Minimal story/objectives (no pressure) - 3
+- Calming visuals/sounds - 4
+- A sleep prompt on game completion - 1
+
+What would motivate you to stop playing and go to sleep? (Open-ended)?
+The fact I have to wake up for school the next day.
+
+### SuperGaston007
+What is your Age Group:
+- [ ] Under 18
+- [x] 18–25
+- [ ] 26–35
+- [ ] 36–45
+- [ ] 46+
+
+How often do you delay going to bed to engage in leisure activities (e.g., gaming, social media)?
+- [ ] Never
+- [ ] Rarely
+- [ ] Sometimes
+- [x] Often
+- [ ] Always
+
+When you game late at night, what type of games do you prefer? (Multiple choice)
+- [x] Simple/casual games (e.g., mobile games, puzzles)
+- [ ] Competitive games (e.g., shooters, MOBAs)
+- [x] Open-world/sandbox games (e.g., Minecraft)
+- [ ] Social games (e.g., Among Us, VRChat)
+- [ ] Other: 
+
+What frustrates you most about very-late-night gaming? (Scale 1–5, 1 = most frustrating)
+- Requires too much focus/effort - 2
+- Games take too long to complete - 1
+- Lack of satisfying "quick wins" - 3
+- Social pressure (e.g., teammates relying on you) - 1
+- Difficulty stopping once started - 5
+
+Do you ever find yourself mindlessly jumping/moving in-game when bored?
+- [ ] Yes, frequently
+- [x] Occasionally
 - [ ] Rarely
 - [ ] Never    
 
 Why do you delay going to bed? (Select all)
 - [ ] To reclaim personal time lost during the day
-- [ ] To relax/unwind
+- [x] To relax/unwind
 - [ ] Fear of missing out (FOMO)
 - [ ] Habit
 - [ ] Other: 
@@ -76,26 +143,25 @@ How satisfied do you feel after a late-night gaming session?
 - [ ] Very satisfied
 - [ ] Satisfied
 - [ ] Neutral
-- [ ] Dissatisfied
+- [x] Dissatisfied
 - [ ] Very dissatisfied
 
 Would you play a game designed to help you wind down before bed?
 - [ ] Yes, if it’s quick and satisfying
 - [ ] Maybe, depending on the gameplay
-- [ ] No, I prefer other activities
+- [x] No, I prefer other activities
 
-Rate how appealing these features sound for a late-night game: (Rank 1–5, 1 = least appealing)
-- Simple controls (e.g., jump/run)
-- Short, completable sessions (10–15 minutes)
-- Minimal story/objectives (no pressure)
-- Calming visuals/sounds
-- A sleep prompt on game completion 
+Rate how appealing these features sound for a late-night game: (Scale 1–5, 1 = least appealing)
+- Simple controls (e.g., jump/run) - 2
+- Short, completable sessions (10–15 minutes) - 4
+- Minimal story/objectives (no pressure) - 4
+- Calming visuals/sounds - 2
+- A sleep prompt on game completion - 1
 
 What would motivate you to stop playing and go to sleep? (Open-ended)?
-Example: "A gentle reminder that I’ve ‘completed’ the session."
+Come back tomorrow to play some more!
 
-#### Answers
-##### Ruoming
+### Pixerler
 What is your Age Group:
 - [ ] Under 18
 - [x] 18–25
@@ -117,7 +183,7 @@ When you game late at night, what type of games do you prefer? (Multiple choice
 - [ ] Social games (e.g., Among Us, VRChat)
 - [ ] Other: 
 
-What frustrates you most about very-late-night gaming? (Rank 1–5, 1 = most frustrating)
+What frustrates you most about very-late-night gaming? (Scale 1–5, 1 = most frustrating)
 - Requires too much focus/effort - 3
 - Games take too long to complete - 2
 - Lack of satisfying "quick wins" - 2
@@ -149,7 +215,7 @@ Would you play a game designed to help you wind down before bed?
 - [x] Maybe, depending on the gameplay
 - [ ] No, I prefer other activities
 
-Rate how appealing these features sound for a late-night game: (Rank 1–5, 1 = least appealing)
+Rate how appealing these features sound for a late-night game: (Scale 1–5, 1 = least appealing)
 - Simple controls (e.g., jump/run) - 5
 - Short, completable sessions (10–15 minutes) - 3
 - Minimal story/objectives (no pressure) - 2
@@ -159,7 +225,7 @@ Rate how appealing these features sound for a late-night game: (Rank 1–5, 1 = 
 What would motivate you to stop playing and go to sleep? (Open-ended)?
 A Satisfying Finish
 
-##### Oliver
+### Flood
 What is your Age Group:
 - [ ] Under 18
 - [x] 18–25
@@ -181,7 +247,7 @@ When you game late at night, what type of games do you prefer? (Multiple choice
 - [ ] Social games (e.g., Among Us, VRChat)
 - [ ] Other: 
 
-What frustrates you most about very-late-night gaming? (Rank 1–5, 1 = most frustrating)
+What frustrates you most about very-late-night gaming? (Scale 1–5, 1 = most frustrating)
 - Requires too much focus/effort - 3
 - Games take too long to complete - 5
 - Lack of satisfying "quick wins" - 3
@@ -213,7 +279,7 @@ Would you play a game designed to help you wind down before bed?
 - [x] Maybe, depending on the gameplay
 - [ ] No, I prefer other activities
 
-Rate how appealing these features sound for a late-night game: (Rank 1–5, 1 = least appealing)
+Rate how appealing these features sound for a late-night game: (Scale 1–5, 1 = least appealing)
 - Simple controls (e.g., jump/run) - 3
 - Short, completable sessions (10–15 minutes) - 5
 - Minimal story/objectives (no pressure) - 1
@@ -223,70 +289,69 @@ Rate how appealing these features sound for a late-night game: (Rank 1–5, 1 =
 What would motivate you to stop playing and go to sleep? (Open-ended)?
 Completion
 
-#### Conclusion
-Target Audience & Behaviour
-- Demographics: Both my participants are 18–25 and always delay bedtime for gaming/social activities, aligning with my research on "revenge bedtime procrastination."
-- Gaming Preferences: Both of them prefer open-world/sandbox games (e.g., Minecraft). Ruoming also enjoys simple/casual games, suggesting open-ended but low-effort games are his type.
-- Mindless Actions: Both of them occasionally "jump/move mindlessly" in-game, meaning my core "jumping" mechanic should be appealing.
+### Conclusion
+#### Target Audience & Behaviour
+- Demographics: Three participants (18–25) and one below 18 consistently delay bedtime for gaming/socialising, reinforcing the "revenge bedtime procrastination" pattern.
+- Gaming Preferences: Open-world/sandbox games (e.g., Minecraft) are universally preferred. Pixerler and SuperGaston007 also enjoy simple/casual games, suggesting a broader appeal for low-effort, open-ended gameplay.
+- Mindless Actions: All participants occasionally engage in mindless in-game movements (e.g., jumping), validating the core "jumping" mechanic as universally engaging.
 
-Top Frustrations:
-- Social Pressure (Ruoming’s #1 frustration): I'll avoid multiplayer elements that create obligation.
-- Game Length (Oliver’s #1 frustration): My levels will be short, completable sessions (10–15 mins).
-- Lack of Quick Wins: There will be small, frequent rewards (e.g., collectibles, visual feedback).
+#### Top Frustrations:
+- Social Pressure: Pixerler’s #1 frustration and a major pain point for SuperGaston007. Multiplayer elements that create obligation will be avoided.
+- Game Length: Flood (5/5) and SuperGaston007 (1/5) prioritise short sessions. Levels will be designed for 10–15 minute completable sessions.
+- Focus/Effort: Tolos44 and Flood list excessive focus as frustrating. Gameplay will prioritise simplicity and low cognitive load.
 
-Reasons for Sleep Procrastination:
-- Ruoming delays bed to relax/unwind and connect with friends in other time zones.
-- Oliver delays due to habit, suggesting my game should feel like a "routine wind-down."
+#### Reasons for Sleep Procrastination:
+- Relaxation/Socialising: Pixerler and SuperGaston007 delay bedtime to unwind or connect with friends in other time zones.
+- Habit: Tolos44 and Flood delay due to ingrained routines, suggesting the game should mimic a calming nightly ritual.
 
-Most Valued Features:
-- Simple Controls (Ruoming: 5/5, Oliver: 3/5): My game will use smooth movement that's simple and satisfying.
-- Calming Visuals/Sounds (Ruoming: 4/5, Oliver: 5/5): The colours will be soft, with ambient music, and smooth animations.
-- Short Sessions (Oliver: 5/5, Ruoming: 3/5): Game sessions will be designed to last just over 15 minutes.
+#### Most Valued Features:
+- Simple Controls: Pixerler (5/5) values this highly, while others show mixed ratings (Tolos44: 1/5, Flood: 3/5). Controls will prioritise intuitive, satisfying movement.
+- Calming Visuals/Sounds: Highly rated by Flood (5/5) and Pixerler (4/5). Design will use soft colours, ambient sounds, and smooth animations.
+- Short Sessions: Critical for Flood (5/5) and Tolos44 (4/5). Sessions will cap at 15 minutes to align with late-night habits.
 
-Controversial Features:
-- Sleep Prompts: Both rated these low (Ruoming: 1/5, Oliver: 3/5). So I'll avoid overt reminders and instead use a natural endpoint (e.g., a "satisfying finish" as Ruoming suggested).
-- Not having Objectives: Both ranked this low (Ruoming: 2/5, Oliver: 1/5). So there will be objectives throughout the game.
+#### Controversial Features:
+- Sleep Prompts: Universally disliked (Tolos44: 1/5, Pixerler: 1/5). Natural endpoints (e.g., checkpoints) will replace overt reminders.
+- Lack of Objectives: Most rank this low (Flood: 1/5, Pixerler: 2/5). Gentle objectives (e.g., collectibles) will guide gameplay without pressure.
 
-Motivations to Stop Playing:
-- Satisfying Finish (Ruoming) and Completion (Oliver): Sessions will end with a clear goal (e.g., reach a checkpoint, collect items) and rewarding feedback.
-- Social Connection: I can try to implement shared leaderboards for Ruoming.
+#### Motivations to Stop Playing:
+- Completion/Satisfaction: Flood and Pixerler emphasise "completion" and a "satisfying finish." Each session will conclude with clear goals and rewarding feedback (e.g., visual/audio cues).
+- Social Connection: Pixerler’s need for social ties could be addressed via passive features like shared leaderboards.
 
-Risks & Contradictions
-- Habit vs. Intent: Oliver’s neutral satisfaction and habitual delay suggest your game must avoid addictive loops (e.g., infinite replayability).
-- Open-World vs. Short Sessions: Balance sandbox freedom with clear stopping points. (May be hard to implement sandbox elements).
+#### Risks & Contradictions:
+- Habit vs. Intent: Flood’s neutral satisfaction and habitual delay highlight the need to avoid addictive loops (e.g., infinite replayability).
+- Open-World vs. Short Sessions: Balancing sandbox freedom with structured endpoints (e.g., daily resets) will be critical to prevent overextension.
+- Anomalous Preferences: SuperGaston007’s dislike of "calming visuals" (2/5) vs. everyone else’s with 4 or 5 rating will lead me to still design a calming game.
 
-### User Needs
+## User Needs and Objectives
 #### From Survey
-- [x] Simple, satisfying movement mechanics (e.g., jumping).
-- [ ] Short, completable sessions (10–15 minutes).
-- [ ] Calming visuals and ambient music.
-- [ ] Small, frequent rewards (e.g., collectibles, visual/audio feedback).
-- [ ] No social pressure or multiplayer obligations.
-- [ ] Open-ended sandbox elements for low-effort exploration.
-- [ ] Light objectives (e.g., challenges) without narrative pressure.
-- [ ] Predictable "routine" structure (e.g., daily resets).
-- [ ] Non-competitive social features (e.g., global leaderboards).
-- [ ] Clear endpoints (e.g., checkpoints, collectible goals).
-- [ ] Avoidance of addictive loops (e.g., finite levels).
-- [ ] Rewardingly subtle "finish" (e.g., no overt sleep prompts).
-- [ ] Satisfying game conclusion (e.g., animations, achievements).
-- [ ] Procedural mini-levels for structured freedom.
-- [ ] Soft colour palettes and smooth animations.
-- [ ] Optional challenges for extended play.
-- [ ] Time-awareness nudges (e.g., "jump count" reminders).
-- [ ] Compatibility with habitual late-night play.
-- [ ] Replayability without infinite grind.
-- [ ] Balancing freedom and stopping points.
-- [ ] Rewarding feedback on session completion (e.g., animations).
+ - [x] Simple, satisfying movement mechanics.
+ - [x] Short, completable sessions (10–15 minutes).
+ - [x] Calming visuals and ambient music.
+ - [ ] Small, frequent rewards (e.g., collectibles, visual/audio feedback).
+ - [x] No social pressure or multiplayer obligations.
+ - [ ] Open-ended sandbox elements for low-effort exploration. <mark style="background: #FF5582A6;">(may not be feasible)</mark>
+ - [ ] Light objectives (e.g., challenges) without narrative pressure.
+ - [ ] Predictable "routine" structure.
+ - [ ] Non-competitive social features (e.g., global leaderboards) (optional, not core).
+ - [ ] Clear endpoints (e.g., checkpoints, collectible goals).
+ - [x] Avoidance of addictive loops (e.g., finite levels).
+ - [ ] Satisfying game conclusion (e.g., animations, achievements).
+ - [ ] Procedural mini-levels for structured freedom.
+ - [x] Soft colour palettes and smooth animations.
+ - [ ] Optional challenges for extended play.
+ - [ ] Time-awareness nudges (e.g., "jump count" reminders).
+ - [x] Compatibility with habitual late-night play.
+ - [ ] Replayability without infinite grind.
+ - [ ] Balancing freedom and stopping points.
+ - [ ] Rewarding feedback on session completion.
+
+#### From Feedback
+- [ ] Cancel Tower Placement
+- [x] Sell Tower
 - [ ] Have the ending of the game be the character going to bed to implore the players to also head to sleep, closing the application behind it.
 - [ ] Have the game load levels randomly on start so its not repetitive.
 - [ ] Allow rebindable keybinds.
 - [ ] Allow different keybinds for one action.
-
-#### From Feedback
-- [ ] Cancel Tower Placement
-- [ ] Sell Tower
-
 
 - [x] online research
 - [x] surveys
@@ -294,14 +359,21 @@ Risks & Contradictions
 - [ ] limitations and objective list
 - [ ] make a plan for level designs even though they're done
 - [ ] input storage and output and process table
-- [ ] pseudocode and flow charts
+- [x] pseudocode and flow charts
 - [ ] comment code
 - [ ] add notes to each screenshots
 - [ ] handle exceptions
 - [ ] improvements I could make if I had time and budget
 - [ ] video testing and test table
-- [ ] while testing code do a testable for each method
+- [x] while testing code do a testable for each method
 - [ ] playerpress dictionary to save my game
+
+## Constraints
+As I am a single developer making this project in my free time I have some obvious constraints such as:
+- Money - This is a project for my education and while due to that I can use copyrighted assets for free. There are still some assets that are paywalled and I can’t use them, I also can’t hire or even get help as this is meant to be done by myself.
+- Time - This project needs to be completed by Easter and must be done in my free time outside of school hours and my part time job. I also need to set aside time for revision and it can’t be completed when I’m abroad on holiday.
+- Skill - Currently I have received a fairly thorough introduction to C#, but still its just an introduction. I have no knowledge of topics that involve other libraries such as networking, databases and Unity
+
 # Plan
 ## Overall
 Hierarchy Chart
