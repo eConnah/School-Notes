@@ -256,6 +256,7 @@ Risks & Contradictions
 - Open-World vs. Short Sessions: Balance sandbox freedom with clear stopping points. (May be hard to implement sandbox elements).
 
 ### User Needs
+#### From Survey
 - [x] Simple, satisfying movement mechanics (e.g., jumping).
 - [ ] Short, completable sessions (10–15 minutes).
 - [ ] Calming visuals and ambient music.
@@ -282,6 +283,11 @@ Risks & Contradictions
 - [ ] Allow rebindable keybinds.
 - [ ] Allow different keybinds for one action.
 
+#### From Feedback
+- [ ] Cancel Tower Placement
+- [ ] Sell Tower
+
+
 - [x] online research
 - [x] surveys
 - [x] list of user needs
@@ -300,167 +306,279 @@ Risks & Contradictions
 ## Overall
 Hierarchy Chart
 ```mermaid
+flowchart LR
+
+    AA["Minigame Platformer"] --- AB["Start Menu"] & AC["Main Level"] & AD["Minigame One"] & AE["Minigame Two"]
+
+    AD --- n1["AI Targeting"] & n2["OOP"] & n3["Data Structures"] & n9["Asynchronous Patterns"]
+
+    n1 --- n11["Tower Targeting Logic"] & n12["Balloon Pathfinding"]
+
+    n2 --- n6["Inheritance"] & n5["Abstract Superclasses"] & n13["Generics"] & n14["Composition/Aggregation"]
+
+    n3 --- n4["Queues (Pathfinding)"] & n7["Dictionaries (Upgrades)"] & n8["Lists (Tower Management)"]
+
+    n9 --- n10["Coroutines (Round Logic)"]
+```
+
+## Minigame One
+Class Diagram:
+```mermaid
+classDiagram
+
+direction BT
+
+    class Player {
+
+        - healthGUI: TextMeshProUGUI
+
+        - moneyGUI: TextMeshProUGUI
+
+        - health: int
+
+        - money: int
+
+        + GetMoney() int
+
+        + UpdateBalance(int) void
+
+        + GetHealth() int
+
+        + ChangeHealth(int) void
+
+    }
+
+  
+
+    class TowerManager~T~ {
+
+        - cost: int
+
+        - towerName: string
+
+        - towers: List~T~
+
+        + BuyTower() void
+
+        + GetTowerName() string
+
+    }
+
+  
+
+    class SnipperManager {
+
+        + SnipperManager()
+
+    }
+
+  
+
+    class Tower {
+
+        + Range: float
+
+        + TowerUpgradeSystem UpgradeSystem
+
+        + AttemptUpgrade(UpgradePathType) void
+
+    }
+
+  
+
+    class Snipper {
+
+        + Range: float
+
+    }
+
+  
+
+    class TowerUpgradeSystem {
+
+        + pathTiers: Dictionary~UpgradePathType, int~
+
+        + CanUpgrade(UpgradePathType, Tower) bool
+
+        + UpgradePath(UpgradePathType, Tower) void
+
+    }
+
+  
+
+    class UpgradeMenu {
+
+        - tower: Tower
+
+        - upgrades: TowerUpgradeSystem
+
+        + OpenUpgradeMenu(Tower) void
+
+        + BuyUpgradeOne() void
+
+        + BuyUpgradeTwo() void
+
+        + BuyUpgradeThree() void
+
+    }
+
+  
+
+    class GameManager {
+
+        - time: TimeController
+
+        - upgradeMenu: UpgradeMenu
+
+        + StartRound() IEnumerator
+
+    }
+
+  
+
+    class TimeController {
+
+        + TimeScale: float
+
+        + ChangeGameSpeed() void
+
+    }
+
+  
+
+    class Balloon {
+
+        + CurrentHP: int
+
+        + TakeDamage(int) void
+
+    }
+
+  
+
+    class UpgradePathType {
+
+        Path1, Path2, Path3
+
+    }
+
+  
+
+    <<abstract>> TowerManager
+
+    <<abstract>> Tower
+
+    <<abstract>> Balloon
+
+    <<enumeration>> UpgradePathType
+
+  
+
+    SnipperManager "1" --|> "1" TowerManager : inherits
+
+    Snipper "1" --|> "1" Tower : inherits
+
+    TowerManager "1" o-- "*" Tower : manages
+
+    Tower "1" --* "1" TowerUpgradeSystem : contains
+
+    UpgradeMenu "1" ..> "1" Tower : interacts with
+
+    GameManager "1" o-- "1" UpgradeMenu : references
+
+    GameManager "1" o-- "1" TimeController : references
+
+    TowerUpgradeSystem "*" ..> "1" UpgradePathType : uses
+
+    GameManager "1" --> "1" Player : references
+
+    Balloon "*" ..> "1" TimeController : uses
+
+    Tower "*" ..> "1" TimeController : uses
+```
+
+State Machine:
+```mermaid
 ---
 
 config:
 
   layout: elk
 
+  theme: neo
+
 ---
 
-flowchart LR
+stateDiagram
 
-    AA["Minigame Platformer"] --- AB["Start Menu"] & AC["Main Level"] & AD["Minigame One"] & AE["Minigame Two"]
+  direction TB
 
-    AD --- n1["AI Targeting"] & n2["OOP"] & n3["Data Types"]
+  [*] --> s0
 
-    n3 --- n4["Queues"] & n7@{ label: "Dictionary's" } & n8["Lists"]
+  s0 --> s1:Upgrade any path
 
-    n2 --- n6["Inheritance"]
+  s1 --> c1
 
-    n6 --- n5["Abstract Superclasses"]
+  c1 --> s2:if 2 initial paths chosen
 
-     AA:::Peach
+  c1 --> s3:if <2 initial paths and tier <2
 
-     AB:::Peach
+  s2 --> s3:Continue upgrading
 
-     AC:::Peach
+  s3 --> c2
 
-     AD:::Peach
+  c2 --> s5:if lockAtTier2=false
 
-     AE:::Peach
+  s5 --> s6:On Tier 3
 
-     n1:::Peach
+  s6 --> s7:Continue upgrading
 
-     n2:::Peach
+  s7 --> s9
 
-     n3:::Peach
+  c2 --> s9:if LockAtTier2=true
 
-     n4:::Peach
+  s9 --> [*]
 
-     n7:::Peach
+  s0:Initial State
 
-     n8:::Peach
+  s1:Upgrade Path (Any to Tier 1)
 
-     n6:::Peach
+  s2:Lock Third Path
 
-     n5:::Peach
+  s3:Upgrade Path (Tier 2)
 
-    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
+  s5:Upgrade Path (Tier 3)
 
-    linkStyle 0 stroke:#FFE0B2,fill:none
+  s6:LockAtTier2 Applied to Other Initial Path
 
-    linkStyle 1 stroke:#FFE0B2,fill:none
+  s7:Upgrade to Max Tier (5)
 
-    linkStyle 2 stroke:#FFE0B2,fill:none
+  s9:Path Locked
 
-    linkStyle 3 stroke:#FFE0B2,fill:none
+  note left of c1
 
-    linkStyle 4 stroke:#FFE0B2,fill:none
+  Initial path selection rules:
 
-    linkStyle 5 stroke:#FFE0B2,fill:none
+        - First 2 upgrades to Tier 1 lock
 
-    linkStyle 6 stroke:#FFE0B2,fill:none
+        the third path
 
-    linkStyle 7 stroke:#FFE0B2,fill:none
+        - Third path becomes unavailable
 
-    linkStyle 8 stroke:#FFE0B2,fill:none
+  end note
 
-    linkStyle 9 stroke:#FFE0B2,fill:none
+  note right of c2
 
-    linkStyle 10 stroke:#FFE0B2,fill:none
+   Mid-game locking rules:
 
-    linkStyle 11 stroke:#FFE0B2,fill:none
+        - Paths with lockAtTier2=true
+
+        stop at Tier 2
+
+        - Others paths can progress to Tier 5
+
+  end note
 ```
-## Minigame One
-```mermaid
----
-
-config:
-
-layout: elk
-
----
-
-classDiagram
-
-direction BT
-
-class GameManager {
-
-gameSpeed
-
-}
-
-class Player {
-
-money
-
-health
-
-}
-
-class TowerManager~T~ {
-
-Initialise()
-
-}
-
-class Tower {
-
-damage
-
-}
-
-class Snipper {
-
-sweepAttack
-
-}
-
-class UpgradeMenu {
-
-Upgrade(path)
-
-}
-
-class SnipperManager {
-
-List~Snipper~
-
-}
-
-class TowerUpgradeSystem {
-
-Dictionary~path, int~ pathTiers
-
-}
-
-  
-
-<<abstract>> TowerManager
-
-<<abstract>> Tower
-
-  
-
-SnipperManager --|> TowerManager
-
-Snipper --|> Tower
-
-Snipper "*" --* "1" SnipperManager
-
-TowerUpgradeSystem --* Snipper
-
-TowerUpgradeSystem ..|> Player
-
-TowerManager ..|> Player
-
-Player --* GameManager
-
-TowerUpgradeSystem "*" -- "1" UpgradeMenu
-```
-
 # Code
 ## Global
 ### Persistent Audio Manager
@@ -526,6 +644,40 @@ TowerUpgradeSystem "*" -- "1" UpgradeMenu
 ### Moving Background
 ![[MovingBackground.png]]
 
+
+# Testing
+
+| Test Case | Description                                | Expected Result                                                   | Actual Result                                                                  | Status                                                  |
+| --------- | ------------------------------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| 001       | Running the game.                          | The game should run.                                              | The game didn't start.                                                         | Fail - [[Minigame Platformer - NEA#Issue 01\|Issue 01]] |
+| 002       | Running the game again.                    | The game should run.                                              | The game ran.                                                                  | Pass                                                    |
+| 003       | Purchasing a tower.                        | I should be able to purchase a tower.                             | I could purchase a tower.                                                      | Pass                                                    |
+| 004       | Placing a tower off the map.               | Shouldn't be able to.                                             | Wasn't able to.                                                                | Pass                                                    |
+| 005       | Placing a tower on the balloon path.       | Shouldn't be able to.                                             | Wasn't able to.                                                                | Pass                                                    |
+| 006       | Purchasing a tower without money.          | Shouldn't be able to.                                             | Wasn't able to.                                                                | Pass                                                    |
+| 007       | Purchasing a tower upgrade.                | I should be able to purchase a tower upgrade.                     | Upgrade button not doing anything.                                             | Fail - [[Minigame Platformer - NEA#Issue 02\|Issue 02]] |
+| 008       | Purchasing a tower upgrade again.          | I should be able to purchase a tower upgrade.                     | An error about a game-object not existing.                                     | Fail - [[Minigame Platformer - NEA#Issue 03\|Issue 03]] |
+| 009       | Purchasing a tower upgrade again.          | I should be able to purchase a tower upgrade.                     | An error about not being able to instantiate a MonoBehaviour script using new. | Fail - [[Minigame Platformer - NEA#Issue 04\|Issue 04]] |
+| 010       | Purchasing a tower upgrade again.          | I should be able to purchase a tower upgrade.                     | Was able to purchase a tower.                                                  | Pass                                                    |
+| 011       | Purchasing a tower upgrade again.          | The UI should reflect the tower updated.                          | Without closing and opening the menu the UI does not refresh.                  | Fail - [[Minigame Platformer - NEA#Issue 05\|Issue 05]] |
+| 012       | Purchasing a tower upgrade again.          | The UI should reflect the tower updated.                          | The UI refreshed.                                                              | Pass                                                    |
+| 013       | Purchasing a tower upgrade again.          | A stop for when the tower is max level.                           | An error thrown about fetching an upgrade that didn't exist.                   | Fail - [[Minigame Platformer - NEA#Issue 06\|Issue 06]] |
+| 014       | Purchasing a tower upgrade again.          | A stop for when the tower is max level.                           | Wasn't able to purchase beyond max level.                                      | Pass                                                    |
+| 015       | Purchasing a tower upgrade again.          | Should be able to upgrade 1 other path after a path is max level. | Wasn't able to purchase another upgrade.                                       | Fail - [[Minigame Platformer - NEA#Issue 07\|Issue 07]] |
+| 016       | Purchasing a tower upgrade again.          | Should be able to upgrade 1 other path after a path is max level. | Was able to level up another path to level 2.                                  | Pass                                                    |
+| 017       | Opening tower menu UI.                     | Locked paths should display a lock icon.                          | Locked paths weren't displaying locked icons on menu refresh.                  | Fail - [[Minigame Platformer - NEA#Issue 08\|Issue 08]] |
+| 018       | Opening tower menu UI.                     | Locked paths should display a lock icon.                          | Locked paths did display the lock icon.                                        | Pass                                                    |
+| 019       | Opening tower menu UI.                     | Locked paths should be unique to each tower.                      | Locked icons were synced between towers.                                       | Fail - [[Minigame Platformer - NEA#Issue 09\|Issue 09]] |
+| 020       | Opening tower menu UI.                     | Locked paths should be unique to each tower.                      | Locked icons were unique to each tower.                                        | Pass                                                    |
+| 021       | Opening tower menu UI.                     | Locked text indicator should update for towers.                   | Locked text indicator wasn't updating for towers.                              | Fail - [[Minigame Platformer - NEA#Issue 10\|Issue 10]] |
+| 022       | Running the game.                          | The game should run.                                              | The game did not run and threw an error about MonoBehaviours in initialisers.  | Fail - [[Minigame Platformer - NEA#Issue 11\|Issue 11]] |
+| 023       | Running the game.                          | The game should run.                                              | The game ran.                                                                  | Pass                                                    |
+| 024       | Placing the towers and playing the game.   | Balloons should take damage from towers.                          | Balloons weren't taking damage from towers.                                    | Fail - [[Minigame Platformer - NEA#Issue 12\|Issue 12]] |
+| 025       | Placing the towers and playing the game.   | Balloons should take damage from towers.                          | Balloons took damage from towers.                                              | Pass                                                    |
+| 026       | Placing a tower in a previously used spot. | Should be able to place a tower where one previously was.         | Placed a tower, sold it and couldn't place another in the same spot.           | Fail - [[Minigame Platformer - NEA#Issue 13\|Issue 13]] |
+| 027       | Placing a tower in a previously used spot. | Should be able to place a tower where one previously was.         | Placed a tower, sold it and placed another in its place. Worked.               | Pass                                                    |
+
+
 # Issues
 ## Issue 01
 - **Type**: Runtime
@@ -557,7 +709,6 @@ public SnipperManager() : base(200) // int is the cost
 	Towers.Add(newTower);
 }
 ```
-
 ### After 01:
 ```csharp
 public SnipperManager() : base(200) {} // Set the cost of the tower
@@ -573,7 +724,6 @@ private void Awake()
 	Towers.Add(newTower);
 }
 ```
-
 ### Re-Test 01:
 Not only did Unity not crash I was able to instantiate a Tower properly of the class Snipper which was created by the SnipperManager script.
 
@@ -597,7 +747,6 @@ void Awake()
 	defaultState = transform.GetChild(4).gameObject;
 }
 ```
-
 ### After 02:
 Listeners now run the respective method.
 ```csharp
@@ -614,9 +763,8 @@ void Awake()
 	upgradeThree.GetComponent<Button>().onClick.AddListener(BuyUpgradeThree);
 }
 ```
-
 ### Re-Test 02:
-Clicking the button now throws an error about a game-object not existing.
+Clicking the button now throws an error about a game-object not existing. ([[Minigame Platformer - NEA#Issue 03|Issue 03]])
 
 ## Issue 03
 - **Type**: UI/Gameplay
@@ -648,7 +796,6 @@ public class TowerUpgradeSystem
 	... // Rest of code
 }
 ```
-
 ### After 03:
 TowerUpgradeSystem now inherits from MonoBehaviour and is now a unity class so is able to use void Awake() to find the player instance.
 ```csharp
@@ -665,7 +812,6 @@ public class TowerUpgradeSystem : MonoBehaviour
 	... // Rest of code
 }
 ```
-
 ### Re-Test 03:
 This update caused [[Minigame Platformer - NEA#Issue 04|Issue 04]] so the fixing and testing of [[Minigame Platformer - NEA#Issue 04|Issue 04]] should also count as the testing of this issue.
 
@@ -706,7 +852,6 @@ protected void Awake()
 	upgradeMenu = FindObjectOfType<UpgradeMenu>();
 }
 ```
-
 ### Re-Test 04:
 Placed a tower and purchased an upgrade successfully, however noticed [[Minigame Platformer - NEA#Issue 05|Issue 05]].
 
@@ -758,7 +903,6 @@ public void BuyUpgradeThree()
 	SetUpgradeText(upgradeThree, UpgradePathType.Path3);
 }
 ```
-
 ### Re-Test 05:
 Bought upgrades and they successfully updated.
 
@@ -784,7 +928,6 @@ UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointe
 UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at ./Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs:272)
 UnityEngine.EventSystems.EventSystem:Update() (at ./Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:530)
 ```
-
 ### Before 06:
 Method just set the text to the next upgrade even if it didn't exist.
 ```csharp
@@ -796,7 +939,6 @@ private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
 	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
     }
 ```
-
 ### After 06:
 Added a hardcode MaxPathLevel which can be changed later if needed, and checked if the tower is already max level so I can disable the upgrade button when it is.
 ```
@@ -817,7 +959,6 @@ private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
 	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
     }
 ```
-
 ### Re-Test 06:
 Purchased as high as I can on one path and it disappeared, then tried to purchase another upgrade for fun and realised [[Minigame Platformer - NEA#Issue 07|Issue 07]].
 
@@ -838,7 +979,6 @@ MinigameOne.Tower:AttemptUpgrade (MinigameOne.UpgradePathType) (at Assets/Miniga
 UpgradeMenu:BuyUpgradeTwo () (at Assets/MinigameOne/Scripts/UpgradeSystem/UpgradeMenu.cs:77)
 UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:530)
 ```
-
 ### Before 07:
 ```csharp
 private Dictionary<UpgradePathType, bool> pathLocks;
@@ -884,6 +1024,385 @@ private void LockOtherInitialPath(UpgradePathType upgradedPath)
 ```
 ### Re-Test 07:
 Upgraded a Tower to 5-0-0 and then attempted to purchase 2 upgrades from another path and it worked blocking the 3rd upgrade but allowing 2.
+
+## Issue 08
+- **Type**: UI
+- **Severity**: Low
+- **Expected Result**: Menu to display locked paths as locked.
+- **Actual Result**: Menu showed lock paths as unlocked after closing and opening.
+- **Fix**: [[Minigame Platformer - NEA#After 08|Added an if statement to check for locked paths]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 08|Opening and closing the menu]]
+When upgrading a tower so that certain paths are locked it would update the current UI but if I clicked off and on the tower refreshing the menu, the ones that are locked due to the way the path works (max level lock worked fine) showed as available.
+
+### Before 08:
+There is no check if a tower upgrade is locked due to reasons other than max level.
+```csharp
+private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
+{
+	if (upgrades.MaxPathLevel == upgrades.pathTiers[pathType])
+	{
+		upgradeButton.GetComponent<Image>().sprite = lockedSprite;
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	var textComponent = upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+	var upgradeKey = (pathType, upgrades.pathTiers[pathType] + 1);
+	var upgradeInfo = tower.PathUpgrades[upgradeKey];
+	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+    }
+```
+### After 08:
+So I added an if statement in the SetUpgradeText() method which is called when the menu is opened to see if the upgrade is locked and display the relevant text immediately.
+```csharp
+private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
+{
+	if (upgrades.MaxPathLevel == upgrades.pathTiers[pathType])
+	{
+		upgradeButton.GetComponent<Image>().sprite = lockedSprite;
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	if (upgrades.IsPathLocked(pathType))
+	{
+		upgradeButton.GetComponent<Image>().sprite = lockedSprite;
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Locked\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	var textComponent = upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+	var upgradeKey = (pathType, upgrades.pathTiers[pathType] + 1);
+	var upgradeInfo = tower.PathUpgrades[upgradeKey];
+	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+    }
+```
+### Re-Test 08:
+Closed and opened the menu to check it showed correct paths as locked. It did, tested with multiple towers.
+
+## Issue 09
+- **Type**: UI
+- **Severity**: Low/Medium
+- **Expected Result**: Menu to display unlocked paths as unlocked.
+- **Actual Result**: Menu showed lock icons synced between all towers.
+- **Fix**: [[Minigame Platformer - NEA#After 09|Changed Lots]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 09|Opening menu of different towers]]
+
+The locked images for the upgrades seem to be synced across all the towers and not individual to each tower.
+### Before 09:
+```csharp
+private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
+{
+	if (upgrades.MaxPathLevel == upgrades.pathTiers[pathType])
+	{
+		upgradeButton.GetComponent<Image>().sprite = lockedSprite;
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	if (upgrades.IsPathLocked(pathType))
+	{
+		upgradeButton.GetComponent<Image>().sprite = lockedSprite;
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Locked\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	var textComponent = upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+	var upgradeKey = (pathType, upgrades.pathTiers[pathType] + 1);
+	var upgradeInfo = tower.PathUpgrades[upgradeKey];
+	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+}
+```
+
+```csharp
+public void UpgradePath(UpgradePathType path, Tower tower)
+{
+	... // Rest of Code
+}
+```
+
+```csharp
+private void SetLockImage()
+{
+	if (upgrades.IsPathLocked(UpgradePathType.Path1))
+	{
+		upgradeOne.GetComponent<Image>().sprite = lockedSprite;
+	}
+	if (upgrades.IsPathLocked(UpgradePathType.Path2))
+	{
+		upgradeTwo.GetComponent<Image>().sprite = lockedSprite;
+	}
+	if (upgrades.IsPathLocked(UpgradePathType.Path3))
+	{
+		upgradeThree.GetComponent<Image>().sprite = lockedSprite;
+	}
+}
+```
+### After 09:
+Removed the image setting in this method and made it purely upgrade text.
+```csharp
+private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
+{
+	if (upgrades.MaxPathLevel == upgrades.pathTiers[pathType])
+	{
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	if (upgrades.IsPathLocked(pathType))
+	{
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Locked\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	var textComponent = upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+	var upgradeKey = (pathType, upgrades.pathTiers[pathType] + 1);
+	var upgradeInfo = tower.PathUpgrades[upgradeKey];
+	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+}
+```
+
+Added a lock for max level paths so the lock icon treats them all the same.
+```csharp
+public void UpgradePath(UpgradePathType path, Tower tower)
+{
+	... // Rest of Code
+	// If the path just reached max tier, lock it
+	if (pathTiers[path] == MaxPathLevel)
+	{
+		pathLocks[path] = (true, false);
+	}
+}
+```
+
+Renamed SetLockImage() to SetCorrectSprites() which is called after each UI change.
+```csharp
+private void SetCorrectSprites()
+{
+	if (upgrades.IsPathLocked(UpgradePathType.Path1))
+	{
+		upgradeOne.GetComponent<Image>().sprite = lockedSprite;
+	}
+	else
+	{
+		upgradeOne.GetComponent<Image>().sprite = defaultSprite;
+	}
+	if (upgrades.IsPathLocked(UpgradePathType.Path2))
+	{
+		upgradeTwo.GetComponent<Image>().sprite = lockedSprite;
+	}
+	else
+	{
+		upgradeTwo.GetComponent<Image>().sprite = defaultSprite;
+	}
+	if (upgrades.IsPathLocked(UpgradePathType.Path3))
+	{
+		upgradeThree.GetComponent<Image>().sprite = lockedSprite;
+	}
+	else
+	{
+		upgradeThree.GetComponent<Image>().sprite = defaultSprite;
+	}
+}
+```
+### Re-Test 09:
+Clicked between multiple towers, clicked on and off towers, made purchases on different towers,  then noticed [[Minigame Platformer - NEA#Issue 10|Issue 10]].
+
+## Issue 10
+- **Type**: UI
+- **Severity**: Low/Medium
+- **Expected Result**: Menu to display correct upgrade text.
+- **Actual Result**: Menu wasn't updating upgrade text.
+- **Fix**: [[Minigame Platformer - NEA#After 10|Always update all text]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 10|Upgrading towers]]
+
+The text in the menu wasn't updating properly for other options.
+### Before 10:
+Called UpgradeText for individual buttons.
+```csharp
+private void SetUpgradeText(GameObject upgradeButton, UpgradePathType pathType)
+{
+	if (upgrades.MaxPathLevel == upgrades.pathTiers[pathType])
+	{
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	if (upgrades.IsPathLocked(pathType))
+	{
+	upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Locked\n(Level {upgrades.pathTiers[pathType]})";
+		return;
+	}
+	var textComponent = upgradeButton.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+	var upgradeKey = (pathType, upgrades.pathTiers[pathType] + 1);
+	var upgradeInfo = tower.PathUpgrades[upgradeKey];
+	textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+}
+```
+### After 10:
+SetUpgradeText now updates all texts. Uses a dictionary to iterate.
+```csharp
+private void SetUpgradeText()
+{
+	foreach (var item in buttonToPath)
+	{
+		if (upgrades.MaxPathLevel == upgrades.pathTiers[item.Value])
+		{
+			item.Key.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Max Level\n(Level {upgrades.pathTiers[item.Value]})";
+			continue;
+		}
+		if (upgrades.IsPathLocked(item.Value))
+		{
+			item.Key.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"Path is Locked\n(Level {upgrades.pathTiers[item.Value]})";
+			continue;
+		}
+		var textComponent = item.Key.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+		var upgradeKey = (item.Value, upgrades.pathTiers[item.Value] + 1);
+		var upgradeInfo = tower.PathUpgrades[upgradeKey];
+		textComponent.text = upgradeInfo.Item1 + " - " + upgradeInfo.Item2 + "G";
+	}
+}
+```
+
+```csharp
+private Dictionary<GameObject, UpgradePathType> buttonToPath;
+```
+### Re-Test 10:
+Purchased upgrades on a tower that caused the other paths to lock and verified the text was updating their state to locked correctly.
+
+## Issue 11
+- **Type**: Gameplay
+- **Severity**: High
+- **Expected Result**: Game to load correctly.
+- **Actual Result**: Game crashed with error message.
+- **Fix**: [[Minigame Platformer - NEA#After 11|Moved bleedingTime code to Awake()]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 11|Starting the round]]
+  
+The game crashed on launch due to the Snipper tower calling timeScale (from a MonoBehaviour class) in an initialisation instead of Awake() or Start().
+```
+UnityException: get_timeScale is not allowed to be called from a MonoBehaviour constructor (or instance field initializer), call it in Awake or Start instead. Called from MonoBehaviour 'Snipper' on game object 'Snipper1'.
+See "Script Serialization" page in the Unity Manual for further details.
+MinigameOne.Snipper..ctor () (at Assets/MinigameOne/Scripts/Towers/Snipper.cs:11)
+UnityEngine.GameObject:AddComponent()
+MinigameOne.TowerManager`1:Initialise() (at Assets/MinigameOne/Scripts/TowerManagers/TowerManager.cs:70)
+MinigameOne.TowerManager`1:BuyTower() (at Assets/MinigameOne/Scripts/TowerManagers/TowerManager.cs:60)
+UnityEngine.EventSystems.EventSystem:Update() (at ./Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:530)
+```
+### Before 11:
+Time.timeScale was called in the variables initialisation.
+```csharp
+private float bleedingTime = 2f * Time.timeScale;
+```
+### After 11:
+It is now called in Awake().
+```csharp
+protected override void Awake()
+{
+	base.Awake();
+	BalloonsInRange = new List<Balloon>();
+	bleedingTime = 2f * Time.timeScale;
+}
+```
+### Re-Test 11:
+Re-Run the code and it worked.
+
+## Issue 12
+- **Type**: Gameplay
+- **Severity**: Very High
+- **Expected Result**: Towers to destroy balloons.
+- **Actual Result**: Balloons just passed by Towers.
+- **Fix**: [[Minigame Platformer - NEA#After 12|Changed Triggers to 2D]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 12|Placed Towers near baloons]]
+
+Balloons weren't entering the triggers for some reasons so towers couldn't target them. Figured out the trigger methods are split into 3D and 2D.
+### Before 12:
+It used normal triggers and colliders.
+```csharp
+protected void OnTriggerEnter(Collider other)
+{
+	if (other.TryGetComponent<Balloon>(out var balloon))
+	{
+		if (!BalloonsInRange.Contains(balloon))
+		{
+			BalloonsInRange.Add(balloon);
+		}
+	}
+}
+
+protected virtual void OnTriggerExit(Collider other)
+{
+	if (other.TryGetComponent<Balloon>(out var balloon))
+	{
+		BalloonsInRange.Remove(balloon);
+	}
+}
+```
+### After 12:
+It uses 2D triggers and colliders.
+```csharp
+protected void OnTriggerEnter2D(Collider2D other)
+{
+	if (other.TryGetComponent<Balloon>(out var balloon))
+	{
+		if (!BalloonsInRange.Contains(balloon))
+		{
+			BalloonsInRange.Add(balloon);
+		}
+	}
+}
+
+protected virtual void OnTriggerExit2D(Collider2D other)
+{
+	if (other.TryGetComponent<Balloon>(out var balloon))
+	{
+		BalloonsInRange.Remove(balloon);
+	}
+}
+```
+### Re-Test 12:
+Placed some towers down and when the balloons got in their range they took damage.
+
+## Issue 13
+- **Type**: Gameplay
+- **Severity**: Medium
+- **Expected Result**: Tilemap replaces itself when tower is sold.
+- **Actual Result**: Tilemap did not replace itself.
+- **Fix**: [[Minigame Platformer - NEA#After 13|Using a different file location]]
+- **Test Case**: [[Minigame Platformer - NEA#Re-Test 13|Selling and placing tower in same area]]
+
+Selling a tower should replace the placeable area tilemap so a tower can be placed there again. It wasn't though leaving the spot empty.
+### Before 13:
+Used the original tilemap location.
+```csharp
+allowedAreaTilemap = GameObject.Find("PlaceableArea").GetComponent<Tilemap>();
+tileBase = Resources.LoadAll<TileBase>("OriginalTilemaps/tilemap")[38];
+```
+### After 13:
+Now uses the TileBase folder location which I forgot about.
+```csharp
+allowedAreaTilemap = GameObject.Find("PlaceableArea").GetComponent<Tilemap>();
+tileBase = Resources.Load<TileBase>("Sprites/Tilemaps/MapDesign/tilemap_38");
+```
+### Re-Test 13:
+Placed a tower, sold it and placed another in its place. Worked.
+
+## Issue 14
+```
+TimeController instance not found!
+UnityEngine.Debug:LogError (object)
+MinigameOne.Balloon:InitializeDependencies () (at Assets/MinigameOne/Scripts/Balloon/Balloon.cs:77)
+MinigameOne.Balloon:Awake () (at Assets/MinigameOne/Scripts/Balloon/Balloon.cs:54)
+UnityEngine.Object:Instantiate<UnityEngine.GameObject> (UnityEngine.GameObject)
+MinigameOne.ObjectPooler:InitializePool () (at Assets/MinigameOne/Scripts/ObjectPooler.cs:42)
+MinigameOne.ObjectPooler:Awake () (at Assets/MinigameOne/Scripts/ObjectPooler.cs:32)
+```
+### Before 14:
+
+### After 14:
+![[ScriptExecutionOrder.png]]
+
+### Re-Test 14:
+```
+Player instance not found!
+UnityEngine.Debug:LogError (object)
+MinigameOne.Balloon:InitializeDependencies () (at Assets/MinigameOne/Scripts/Balloon/Balloon.cs:78)
+MinigameOne.Balloon:Awake () (at Assets/MinigameOne/Scripts/Balloon/Balloon.cs:54)
+UnityEngine.Object:Instantiate<UnityEngine.GameObject> (UnityEngine.GameObject)
+MinigameOne.ObjectPooler:InitializePool () (at Assets/MinigameOne/Scripts/ObjectPooler.cs:42)
+MinigameOne.ObjectPooler:Awake () (at Assets/MinigameOne/Scripts/ObjectPooler.cs:32)
+```
 
 # References
 ## Game Resources
