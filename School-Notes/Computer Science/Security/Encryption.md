@@ -10,3 +10,6 @@ Uses two separate but related keys. Also known as private/public key encryption/
 In order to verify the integrity of a message the sender can add a digital signature to a message. The sender creates the digital signature by irreversibly reducing the encrypted message to produce a hash encrypting the hash using their private key. The send bundles the digital signature with the message and encrypts the bundle using the recipients key.
 
 As a signature can only be decrypted by the senders public key the signature can be considered genuine and unaltered.
+
+## Vernam Cipher
+XOR with the one time pad.

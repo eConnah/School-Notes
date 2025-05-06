@@ -1,1 +1,0 @@
-A basic method of compression that summarises consecutive patterns of the same data, works well with image and sound data where data could be repeated many times. If there is no repetition it could have the opposite effect and increase file size.

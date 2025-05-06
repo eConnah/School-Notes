@@ -5,5 +5,5 @@
 [[Lossy]]
 [[MIDI]]
 [[Primary and Secondary]]
-[[RLE]]
+[[Data Compression]]
 [[Vernam Cipher]]
